@@ -35,7 +35,8 @@ public class MyArray {
         for (int i =size-1; i >=0 ; i--) {
             data[i+1]=data[i];
         }
-        size--;
+        data[0]=val;
+        size++;
     }
     //尾插法
     public  void addLast(int val){

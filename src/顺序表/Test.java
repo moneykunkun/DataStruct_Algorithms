@@ -8,5 +8,10 @@ public class Test {
         myArray.addLast(5);
         myArray.addLast(7);
         System.out.println(myArray);
+
+        myArray.addFirst(10);
+        myArray.addFirst(11);
+        myArray.addFirst(12);
+        System.out.println(myArray);
     }
 }
