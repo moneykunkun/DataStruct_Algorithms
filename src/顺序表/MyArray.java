@@ -25,12 +25,17 @@ public class MyArray {
     }
 
     //头插法
-    public  void addFirst(){
+    public  void addFirst(int val){
         //先判断数组是否已满
         if (size==data.length){
             //数组已满，需要扩容
             grow();
         }
+        //数组的第一个位置空出来，将后面的元素依次后移
+        for (int i =size-1; i >=0 ; i--) {
+            data[i+1]=data[i];
+        }
+        size--;
     }
     //尾插法
     public  void addLast(int val){
