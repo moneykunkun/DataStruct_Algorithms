@@ -1,9 +1,9 @@
-package 链表;
+package 链表.singleLinkedList;
 
 //链表的接口
 public interface MyList {
         //添加元素
-    void add(int val);
+    void addFirst(int val);
     //删除元素
     int remove(int index);
     //通过索引获得元素

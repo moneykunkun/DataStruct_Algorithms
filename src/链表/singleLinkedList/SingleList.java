@@ -1,4 +1,4 @@
-package 链表;
+package 链表.singleLinkedList;
 
 public class SingleList implements MyList{
     /**
@@ -7,6 +7,10 @@ public class SingleList implements MyList{
     class Node{
         int val;        //节点值
         Node next;      //存储下一节点对象地址
+
+        public Node(int val){
+            this.val=val;
+        }
         public Node(int val, Node next) {
             this.val = val;
             this.next = next;
@@ -20,8 +24,26 @@ public class SingleList implements MyList{
      * @param val
      */
     @Override
-    public void add(int val) {
+    public void addFirst(int val) {
+        //新建一个节点
+        Node node =new Node(val);
+        //判断链表是否为空
+        if (head ==null){
+            head=node;
+        }else {
+            //链表中有节点，把当前节点挂在到头节点之前
+            node.next=head;
+            head=node;
+        }
+        size++;
+    }
 
+    @Override
+    public String toString() {
+        return "SingleList{" +
+                "head=" + head +
+                ", size=" + size +
+                '}';
     }
 
     @Override
