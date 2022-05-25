@@ -13,5 +13,15 @@ public class Test {
         myArray.addFirst(11);
         myArray.addFirst(12);
         System.out.println(myArray);
+
+        myArray.addIndex(0,8);
+        System.out.println(myArray);
+        System.out.println("--------");
+        myArray.addIndex(1,7);
+        System.out.println(myArray);
+        myArray.addIndex(9,9);
+        System.out.println(myArray);
+        myArray.addIndex(11,11);
+        System.out.println(myArray);
     }
 }

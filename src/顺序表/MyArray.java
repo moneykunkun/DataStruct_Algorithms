@@ -48,13 +48,30 @@ public class MyArray {
         data[size] =val;
         size++;
     }
+    //在指定索引位置插入
+    public  void addIndex(int index,int val){
+        //先判断数组是否已满
+        if (size==data.length){
+            //数组已满，需要扩容
+            grow();
+        }
+        //判断插入位置的索引是否合法
+        if (index<0 || index>size){
+            System.out.println("index illegal！");
+            return;
+        }
+        for (int i=size-1;i>=index;i--){
+            data[i+1]=data[i];
+        }
+        data[index]=val;
+        size++;
+    }
 
     //数组扩容
     private void grow() {
         int[] newDate = Arrays.copyOf(this.data, data.length << 1);
         this.data =newDate;
     }
-
     @Override
     public String toString() {
         String ret="[";
@@ -66,16 +83,4 @@ public class MyArray {
         }
         return  ret+="]";
     }
-
-    //在指定索引位置插入
-    public  void addIndex(int index,int val){
-        //先判断数组是否已满
-        if (size==data.length){
-            //数组已满，需要扩容
-            grow();
-        }
-    }
-
-
-
 }
