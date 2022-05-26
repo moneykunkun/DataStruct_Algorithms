@@ -67,6 +67,36 @@ public class MyArray {
         size++;
     }
 
+    //根据元素查找索引
+    public int getByValue(int val){
+        //遍历索引
+        for (int i = 0; i < size; i++) {
+            if (data[i]==val){
+                return i;
+            }
+        }
+        //没找到
+        return -1;
+    }
+
+    //判断数组是否包含指定元素
+    public boolean contains(int val){
+        int index=getByValue(val);
+        if (index==-1){
+            return false;
+        }
+        return true;
+    }
+
+    //根据索引查询元素
+    public int get(int index){
+        //判断索引的合法性
+        if (index<0 || index>=size){
+            System.out.println("index illegal");
+            return -1;
+        }
+        return data[index];
+    }
     //数组扩容
     private void grow() {
         int[] newDate = Arrays.copyOf(this.data, data.length << 1);

@@ -17,11 +17,10 @@ public class Test {
         myArray.addIndex(0,8);
         System.out.println(myArray);
         System.out.println("--------");
-        myArray.addIndex(1,7);
+        myArray.addIndex(0,88);
         System.out.println(myArray);
-        myArray.addIndex(9,9);
-        System.out.println(myArray);
-        myArray.addIndex(11,11);
+        System.out.println("--------");
+        myArray.addIndex(9,99);
         System.out.println(myArray);
     }
 }
