@@ -1,4 +1,4 @@
-package 链表.singleLinkedList;
+package 数据结构.链表.singleLinkedList;
 
 public class SingleList implements MyList{
     /**

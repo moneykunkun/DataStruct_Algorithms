@@ -1,4 +1,4 @@
-package 顺序表;
+package 数据结构.顺序表;
 
 public class Test {
     public static void main(String[] args) {

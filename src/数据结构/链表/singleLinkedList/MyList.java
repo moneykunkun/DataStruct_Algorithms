@@ -1,4 +1,4 @@
-package 链表.singleLinkedList;
+package 数据结构.链表.singleLinkedList;
 
 //链表的接口
 public interface MyList {
