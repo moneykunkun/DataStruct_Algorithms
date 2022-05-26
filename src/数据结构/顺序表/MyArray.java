@@ -109,6 +109,20 @@ public class MyArray {
         data[index] =newVal;
         return oldVal;
     }
+
+    //根据索引删除
+    public void remove(int index){
+        //判断索引的合法性
+        if (index <0 || index >=size){
+            System.out.println("index illegal");
+            return;
+        }
+        for (int i =index; i <size ; i++) {
+            data[i]=data[i+1];
+        }
+        size--;
+        data[size]=0;       //删除最后一个元素
+    }
     //数组扩容
     private void grow() {
         int[] newDate = Arrays.copyOf(this.data, data.length << 1);
