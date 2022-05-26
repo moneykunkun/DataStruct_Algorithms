@@ -22,5 +22,10 @@ public class Test {
         System.out.println("--------");
         myArray.addIndex(9,99);
         System.out.println(myArray);
+
+        System.out.println("-------");
+        System.out.println(myArray.get(5));
+        System.out.println(myArray.contains(88));
+        System.out.println(myArray.set(5,100));
     }
 }
