@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 //牛客网
 //https://www.nowcoder.com/questionTerminal/181a1a71c7574266ad07f9739f791506
-public class NewCoder_maxSubStr {
+public class NC_maxSubStr {
 
     //求最长公共子串
     public static String maxSubStr(String str1,String str2){

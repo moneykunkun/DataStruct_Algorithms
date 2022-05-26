@@ -1,6 +1,6 @@
 package 算法.动态规划;
 //字符串匹配
-public class LeetCode44_isMatch {
+public class LC44_isMatch {
         public boolean isMatch(String s, String p) {
             boolean[][] table =new boolean[s.length()+1][p.length()+1];
             //空空字符串匹配

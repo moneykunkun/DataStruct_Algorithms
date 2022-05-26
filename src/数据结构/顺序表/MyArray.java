@@ -117,11 +117,29 @@ public class MyArray {
             System.out.println("index illegal");
             return;
         }
-        for (int i =index; i <size ; i++) {
-            data[i]=data[i+1];
+        for (int i =index; i <size-1 ; i++) {
+            data[i]=data[i+1];      //保证元素不越界
         }
         size--;
-        data[size]=0;       //删除最后一个元素
+        data[size]=0;
+    }
+
+    //删除数组中第一个值为val的元素
+    public void removeOnce(int val){
+        for (int i = 0; i < size; i++) {
+            if (data[i]==val){
+                //此时i就是第一个值为val的索引
+                remove(i);
+            }
+        }
+    }
+    //删除数组中所有值为val的元素
+    public  void removeAll(int val){
+        for (int i = 0; i < size; i++) {
+            while (i !=size&& data[i]==val){
+                remove(i);
+            }
+        }
     }
     //数组扩容
     private void grow() {
