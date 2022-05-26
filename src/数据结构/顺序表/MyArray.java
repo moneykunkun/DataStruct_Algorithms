@@ -97,6 +97,18 @@ public class MyArray {
         }
         return data[index];
     }
+
+    //根据索引修改指定元素,返回修改前的元素
+    public int set(int index,int newVal){
+        //判断索引的合法性
+        if (index<0 || index>=size){
+            System.out.println("index illegal");
+            return -1;
+        }
+        int oldVal =data[index];
+        data[index] =newVal;
+        return oldVal;
+    }
     //数组扩容
     private void grow() {
         int[] newDate = Arrays.copyOf(this.data, data.length << 1);
