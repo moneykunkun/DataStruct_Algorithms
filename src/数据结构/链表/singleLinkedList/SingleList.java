@@ -93,20 +93,45 @@ public class SingleList implements MyList{
     //修改索引位置的元素
     @Override
     public int set(int index, int newVal) {
+        int oldVal;
         if (checkRange(index)){
             Node node =head;
             for (int i = 0; i < index; i++) {
                 node=node.next;
             }
-            int oldVal =node.val;
+             oldVal =node.val;
             node.val =newVal;
         }else {
             System.out.println("index illegal");
             return -1;
         }
-        return 0;
+        return oldVal;
     }
-
+    //删除索引位置的节点
+    @Override
+    public void remove(int index) {
+        if (checkRange(index)){
+         //边界 头节点
+            if (index ==0){
+                Node temp =head;
+                head=head.next;
+                temp.next =null;
+                size--;
+            }else {
+                //index 中间位置,找到待删除的前驱节点
+                Node prev =head;
+                for (int i = 0; i <index-1 ; i++) {
+                    prev=prev.next;
+                }
+                Node cur =prev.next;        //待删除的节点
+                prev.next =cur.next;
+                cur.next =null;
+                size--;
+            }
+        }else {
+            System.out.println("index illegal");
+        }
+    }
     @Override
     public boolean contains(int val) {
         for (Node temp=head; temp !=null;temp=temp.next){
@@ -119,7 +144,7 @@ public class SingleList implements MyList{
 
     //校验索引的合法性
     private boolean checkRange(int index){
-        if (index<0 || index >=size){
+        if (index<0 || index >size-1){
             return false;
         }
         return true;
@@ -139,13 +164,6 @@ public class SingleList implements MyList{
         ret +="NULL";
         return  ret;
     }
-
-    @Override
-    public int remove(int index) {
-        return 0;
-    }
-
-
 
     @Override
     public int size() {

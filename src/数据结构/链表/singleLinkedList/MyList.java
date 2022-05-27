@@ -16,7 +16,7 @@ public interface MyList {
     boolean contains(int val);
 
     //删除元素
-    int remove(int index);
+    void remove(int index);
     //获取链表的长度
     int size();
 }
