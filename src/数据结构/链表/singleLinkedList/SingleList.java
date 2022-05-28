@@ -132,6 +132,61 @@ public class SingleList implements MyList{
             System.out.println("index illegal");
         }
     }
+
+    //删除第一个值为val的节点
+    public void removeValueOnce(int val){
+        //遍历节点，找到待删除的节点
+        if (head !=null &&head.val ==val){
+            Node temp =head;
+            head =head.next;
+            temp.next=null;
+            size--;
+        }else {
+            //此时 ，头节点不是待删除的节点
+            Node prev =head;
+            //判断前驱节点的下一个节点是否等于val
+            while (prev.next !=null){
+                if (prev.next.val ==val){
+                    //cur就是待删除的节点
+                    Node cur =prev.next;
+                    //删除cur
+                    prev.next =cur.next;
+                    cur.next =null;
+                    size--;
+                    return;
+                }
+             //prev不是待删除节点的前驱节点，向后遍历
+                prev =prev.next;
+            }
+        }
+    }
+
+    //删除所有值为val的节点
+    public void removeAll(int val){
+        //头节点是待删除的节点
+        while (head != null && head.val ==val){
+            head =head.next;
+            size--;
+        }
+        if (head ==null){
+            return;
+        }else {
+            //链表不为空，且头节点不是待删除的节点
+            Node prev =head;
+            while (prev.next !=null){
+                if (prev.next.val ==val){
+                    Node cur =prev.next;
+                    prev.next =cur.next;
+                    cur.next =null;
+                    size--;
+                }else {
+                    //前驱节点不是待删除的节点，继续向后遍历
+                    prev =prev.next;
+                }
+            }
+        }
+
+    }
     @Override
     public boolean contains(int val) {
         for (Node temp=head; temp !=null;temp=temp.next){

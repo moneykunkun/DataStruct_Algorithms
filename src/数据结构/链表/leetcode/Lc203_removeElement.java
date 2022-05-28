@@ -1,7 +1,6 @@
 package 数据结构.链表.leetcode;
 
 public class Lc203_removeElement {
-
     //解法 一
     //删除当前链表中所有值为val的节点，返回删除后的链表的头节点
     /*public ListNode removeElements(ListNode head, int val) {
