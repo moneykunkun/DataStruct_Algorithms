@@ -6,9 +6,22 @@ public class Lc206_reverseList {
      * @param head
      * @return
      */
+    //解法一 改变链表的指向
     public ListNode reverseList(ListNode head) {
-
-        return null;
+        if (head ==null || head.next ==null){
+            return head;
+        }
+        ListNode prev =null;
+        //当前需要处理的节点，需要反转
+        ListNode cur =head;
+        while (cur !=null){
+            //暂存一下需要处理的节点
+            ListNode next =cur.next;
+            cur.next =prev;
+            prev =cur;
+            cur =next;
+        }
+        return prev;
     }
 
     //解法二  新建一个链表，头插法
