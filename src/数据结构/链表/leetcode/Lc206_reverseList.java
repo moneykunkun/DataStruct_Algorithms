@@ -39,4 +39,18 @@ public class Lc206_reverseList {
         }
         return dummyHead.next;
     }
+
+    //递归解法
+    public ListNode reverseList2(ListNode head) {
+        if (head ==null || head.next ==null){
+            return head;
+        }
+        ListNode sec =head.next;
+        //反转第二个节点之后的节点
+        ListNode newHead =reverseList(head.next);
+        //将sec指向head，head指向空
+        sec.next =head;
+        head.next =null;
+        return newHead;
+    }
 }
