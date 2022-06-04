@@ -91,6 +91,48 @@ public class DoubleLinkedList {
         return ret;
     }
 
+    //获取指定索引位置的元素
+    public int get(int index) {
+        if (rangeIndex(index)) {
+            //索引合法
+            return node(index).val;
+        } else {
+            System.out.println("index illegal");
+            return -1;
+        }
+    }
+    //判断所以的合法性
+    private boolean rangeIndex(int index) {
+        if (index<0 || index >=size){
+            return false;
+        }
+        return true;
+    }
+    //判断链表是否包含指定元素
+    public boolean contains(int val){
+        //遍历链表
+        for (Node x = head; x != null; x = x.next) {
+            if (x.val == val) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //根据索引修改元素值，返回修改前的值
+    public int set(int index,int newVal){
+        if (rangeIndex(index)){
+            Node node =node(index);
+            int oldVal =node.val;
+            node.val =newVal;
+            return oldVal;
+        }else {
+            System.out.println("index illegal");
+            return -1;
+        }
+    }
+
+
     @Override
     public String toString() {
         String ret="";
