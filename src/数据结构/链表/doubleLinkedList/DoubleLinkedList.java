@@ -146,6 +146,31 @@ public class DoubleLinkedList {
         }
     }
 
+    //删除指定元素一次
+    public void removeIndexOnce(int val){
+        //找到待删除节点
+        for (Node x =head; x !=null;x=x.next){
+            if (x.val ==val){
+                unlink(x);
+                break;
+            }
+        }
+    }
+
+    //删除所有值为val的元素
+    public void removeIndexAll(int val){
+        for (Node x =head; x !=null;){
+            if (x.val ==val){
+                //x就是待删除的节点
+                Node next =x.next;
+                //删除之后，x.next=x.prev 都为空
+                unlink(x);
+                x=next;
+            }else {
+                x =x.next;
+            }
+        }
+    }
     /**
      * 将节点node从链表中断开
      * @param node
