@@ -132,6 +132,49 @@ public class DoubleLinkedList {
         }
     }
 
+    /**
+     * 删除指定索引位置的节点
+     * @param index
+     */
+    public void removeIndex(int index){
+        if (rangeIndex(index)){
+            //找到索引位置的节点
+            Node node =node(index);
+            unlink(node);
+        }else {
+            System.out.println("index illegal");
+        }
+    }
+
+    /**
+     * 将节点node从链表中断开
+     * @param node
+     */
+    public  void unlink(Node node){
+        //分治思想，先处理待删除节点的前驱，在处理待删除节点后继节点
+        //找到node节点的前驱节点和后继节点
+        Node prev =node.prev;
+        Node next =node.next;
+        //先处理前驱节点,两种情况，有前驱和没有前驱
+        if (prev ==null){
+            //没有前驱，即是头节点
+            head =next;
+        }else {
+            //有前驱
+            prev.next =next;
+            node.next =null;
+        }
+        //再处理后半部分
+        if (next ==null){
+            //没有后继节点，即是尾节点
+            tail =prev;
+        }else {
+            next.prev =prev;
+            prev.next =next;
+            node.next =null;
+        }
+        size--;
+    }
 
     @Override
     public String toString() {
