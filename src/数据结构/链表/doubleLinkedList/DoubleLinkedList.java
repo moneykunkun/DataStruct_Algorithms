@@ -1,5 +1,7 @@
 package 数据结构.链表.doubleLinkedList;
 
+import 数据结构.链表.singleLinkedList.SingleList;
+
 public class DoubleLinkedList {
     private int size;                  //链表的元素个数
     private Node head;          //头节点
@@ -72,20 +74,36 @@ public class DoubleLinkedList {
 
     //找到index索引对应的节点
     private Node node(int index) {
-        Node ret =null;
+        Node ret = null;
         //index <size/2 （从头开始找）
-        if (index <(size>>1)){
-            ret =head;
+        if (index < (size >> 1)) {
+            ret = head;
             for (int i = 0; i < index; i++) {
-                ret =ret.next;
+                ret = ret.next;
             }
-        }else {
+        } else {
             //从后向前遍历
-            ret =tail;
-            for (int i = size-1; i >index ; i--) {
-                tail.prev =tail;
+            ret = tail;
+            for (int i = size - 1; i > index; i--) {
+                ret = ret.prev;       // tail.prev =tail;
             }
         }
         return ret;
+    }
+
+    @Override
+    public String toString() {
+        String ret="";
+        //遍历链表
+        //先存储一下头节点
+        Node node =head;
+        while (node !=null){
+            ret += node.val;
+            ret+="->";
+            //继续向后遍历访问
+            node =node.next;
+        }
+        ret +="NULL";
+        return  ret;
     }
 }
