@@ -1,5 +1,8 @@
 package 数据结构.链表.leetcode;
 
+/**
+ * 回文链表
+ */
 public class Lc234_isPalindrome2 {
     public boolean isPalindrome(ListNode head) {
         //创建一个新链表，新链表是原链表的倒置
