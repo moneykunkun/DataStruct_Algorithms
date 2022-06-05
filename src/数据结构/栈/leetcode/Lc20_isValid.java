@@ -18,20 +18,14 @@ public class Lc20_isValid {
                 }
                 //弹出栈顶元素
                 char top =stack.pop();
-                if (c==')'){
-                    if (top !='('){
+                if (c==')' && top !='('){
                         return false;
-                    }
                 }
-                if (c==']'){
-                    if (top !='['){
+                if (c==']' && top !='['){
                         return false;
-                    }
                 }
-                if (c=='}'){
-                    if (top !='{'){
+                if (c=='}' && top !='{'){
                         return false;
-                    }
                 }
             }
         }
