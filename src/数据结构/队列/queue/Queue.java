@@ -6,7 +6,7 @@ public interface Queue<E> {
     void offer(E val);
 
     //出队
-    void poll();
+    E poll();
 
     //返回队首元素
     E peek();

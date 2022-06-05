@@ -2,6 +2,8 @@ package 数据结构.队列.queue.impl;
 
 import 数据结构.队列.queue.Queue;
 
+import java.util.NoSuchElementException;
+
 /**
  * 基于链表实现的基础队列
  */
@@ -37,18 +39,37 @@ public class MyQueue<E> implements Queue<E> {
         size++;
     }
 
+    /**
+     * 出队
+     */
     @Override
-    public void poll() {
-
+    public E poll() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("queue is empty");
+        }
+        E val = head.val;
+        Node node = head;
+        head = head.next;
+        //将原来头节点置空
+        node.next = null;
+        size--;
+        return val;
     }
 
+    /**
+     * 取出队首元素
+     * @return
+     */
     @Override
     public E peek() {
-        return null;
+        if (isEmpty()){
+            throw  new NoSuchElementException("queue is empty");
+        }
+       return head.val;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return size ==0;
     }
 }
