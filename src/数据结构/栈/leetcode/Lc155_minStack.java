@@ -24,7 +24,6 @@ public class Lc155_minStack {
         s2.push(Math.min(temp,val));
     }
     }
-
     public void pop() {
         s1.pop();
         s2.pop();
