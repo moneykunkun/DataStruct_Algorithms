@@ -72,4 +72,19 @@ public class MyQueue<E> implements Queue<E> {
     public boolean isEmpty() {
         return size ==0;
     }
+
+    @Override
+    public String toString() {
+      StringBuilder sb =new StringBuilder();
+      sb.append("Front [");
+      for (Node x =head; x != null ;x =x.next){
+          sb.append(x.val);
+          if (x.next != null){
+              //还没走到链表尾部
+              sb.append(",");
+          }
+      }
+      sb.append("]");
+      return sb.toString();
+    }
 }
