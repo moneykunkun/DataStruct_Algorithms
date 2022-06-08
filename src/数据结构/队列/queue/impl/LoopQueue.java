@@ -2,7 +2,6 @@ package 数据结构.队列.queue.impl;
 
 import 数据结构.队列.queue.Queue;
 
-import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 /**
