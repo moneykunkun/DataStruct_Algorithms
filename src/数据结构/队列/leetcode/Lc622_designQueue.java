@@ -1,4 +1,4 @@
-package 数据结构.队列.queue.leetcode;
+package 数据结构.队列.leetcode;
 
 public class Lc622_designQueue {
 
