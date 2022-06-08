@@ -2,6 +2,7 @@ package 数据结构.队列.queue.impl;
 
 import 数据结构.队列.queue.Queue;
 
+import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 /**
@@ -66,5 +67,22 @@ public class LoopQueue implements Queue<Integer> {
      */
     public boolean isFull(){
         return (tail+1)%date.length ==head;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb =new StringBuilder();
+        sb.append("Front [");
+        //取得最后一个元素的下标
+        int lastIndex = tail==0 ?date.length-1:tail-1;
+        for (int i = head; i <tail ; ) {
+            sb.append(date[i]);
+            if ( i != lastIndex){
+                sb.append(",");
+            }
+            i=(i+1)%date.length;            //i继续向后遍历
+        }
+        sb.append("] Tail");
+        return sb.toString();
     }
 }
