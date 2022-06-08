@@ -19,6 +19,8 @@ public class LoopQueue implements Queue<Integer> {
         //循环队列，需要一个额外的空间开辟一个空间。判断队列是否已满
         date =new Integer[n+1];
     }
+
+    //入队操作
     @Override
     public void offer(Integer val) {
         if (isFull()){
@@ -30,6 +32,7 @@ public class LoopQueue implements Queue<Integer> {
         size++;
     }
 
+    //出队操作
     @Override
     public Integer poll() {
         if (isFull()){
@@ -41,9 +44,15 @@ public class LoopQueue implements Queue<Integer> {
         return val;
     }
 
+
+    //取出队首元素
     @Override
     public Integer peek() {
-        return null;
+        if (isEmpty()){
+            throw new NoSuchElementException("queue is empty!");
+        }
+        Integer val =date[head];
+        return val;
     }
 
     @Override
