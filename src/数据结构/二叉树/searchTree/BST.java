@@ -162,16 +162,16 @@ public class BST {
     }
 
     //删除BST中的任意元素
-   /* public void remove(int val){
+    public void remove(int val){
         root = remove(root,val);
-    }*/
+    }
 
     /**
      * 在当前以root为根节点的BST中，删除值为val 的节点
      * @param root
      * @param val
      * @return
-     *//*
+     */
     private TreeNode remove(TreeNode root, int val) {
         //边界，所有节点中都不存在值为val的节点
         if (root == null){
@@ -209,14 +209,14 @@ public class BST {
         }
     }
 
-    @Override
+  /*  @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         generateBSTString(root,0,sb);
         return sb.toString();
     }
-
-    *//**
+*/
+    /**
      * 先序遍历以root为根节点的BST，将节点值存到sb中
      * @param root
      * @param height
