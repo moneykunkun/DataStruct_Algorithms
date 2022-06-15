@@ -209,19 +209,18 @@ public class BST {
         }
     }
 
-  /*  @Override
+    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         generateBSTString(root,0,sb);
         return sb.toString();
     }
-*/
     /**
      * 先序遍历以root为根节点的BST，将节点值存到sb中
      * @param root
      * @param height
      * @param sb
-     *//*
+     */
     private void generateBSTString(TreeNode root, int height, StringBuilder sb) {
     //边界条件
         if (root == null){
@@ -234,7 +233,6 @@ public class BST {
         //递归遍历右子树
         generateBSTString(root.right,height+1,sb);
     }
-*/
     /**
      * 按照当前树所处的层次打印--
      * 每多一层，就多两个--
