@@ -82,7 +82,7 @@ public class BST {
     /**
      * 查找BST中的最大值
      * @return
-     *//*
+     */
     public int findMax(){
         if (size == 0){
             return 0;
@@ -91,11 +91,11 @@ public class BST {
         return maxNode.val;
     }
 
-    *//**
+    /**
      * 查找BST中最大值节点
      * @param root
      * @return
-     *//*
+     */
     private TreeNode maxNode(TreeNode root) {
         if (root.right == null){
             return root;
@@ -104,7 +104,7 @@ public class BST {
         return maxNode(root.right);
     }
 
-    *//**
+    /**
      * 删除BST中的最小值节点，返回最小值
      * @return
      *//*
