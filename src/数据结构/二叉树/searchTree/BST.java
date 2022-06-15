@@ -53,10 +53,10 @@ public class BST {
         return root;
     }
 
-   /* *//**
+   /**
      * 找到二分搜索树的最小值
      * @return
-     *//*
+     */
     public int findMin(){
         if (size == 0){
             //空树
@@ -66,11 +66,11 @@ public class BST {
         return minNode.val;
     }
 
-    *//**
+    /**
      * 查找以root 为根节点的子树中的最小值节点
      * @param root
      * @return
-     *//*
+     */
     private TreeNode minNode(TreeNode root) {
         if (root.left == null){
             return root;
@@ -79,7 +79,7 @@ public class BST {
         return minNode(root.left);
     }
 
-    *//**
+    /**
      * 查找BST中的最大值
      * @return
      *//*
