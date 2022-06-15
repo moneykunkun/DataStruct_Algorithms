@@ -107,18 +107,18 @@ public class BST {
     /**
      * 删除BST中的最小值节点，返回最小值
      * @return
-     *//*
+     */
     public int removeMin(){
     int min = findMin();
     root = removeMin(root);
     return min;
     }
 
-    *//**
+    /**
      * 找到以root为根节点的最小值节点，返回最小值节点
      * @param root
      * @return
-     *//*
+     */
     private TreeNode removeMin(TreeNode root) {
         if (root.left == null){
             //此时，root就是最小值,先暂存一下右子树
@@ -133,7 +133,7 @@ public class BST {
 
     }
 
-    *//**
+    /**
      * 删除BST中的最大值，并返回删除的节点值
      * @return
      *//*
