@@ -136,18 +136,18 @@ public class BST {
     /**
      * 删除BST中的最大值，并返回删除的节点值
      * @return
-     *//*
+     */
     public  int removeMax(){
         int max= findMax();
         root = removeMax(root);
         return max;
     }
 
-    *//**
+    /**
      * 删除BST中的最大值节点
      * @param root
      * @return
-     *//*
+     */
     private TreeNode removeMax(TreeNode root) {
         if (root.right == null){
             //此时最大值节点就是root，暂存一下root.left
@@ -162,11 +162,11 @@ public class BST {
     }
 
     //删除BST中的任意元素
-    public void remove(int val){
+   /* public void remove(int val){
         root = remove(root,val);
-    }
+    }*/
 
-    *//**
+    /**
      * 在当前以root为根节点的BST中，删除值为val 的节点
      * @param root
      * @param val
