@@ -1,4 +1,4 @@
-package 算法.other;
+package newCoder_leetCode;
 
 import java.util.Scanner;
 //客似云来
