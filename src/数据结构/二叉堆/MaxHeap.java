@@ -8,6 +8,8 @@ import java.util.NoSuchElementException;
  * 最大堆问题
  * 1.最大堆首先再结构上和满二叉树相似
  * 2.最大堆满足：根节点值 >= 子节点的值
+ *
+ * 根节点从0开始
  */
 public class MaxHeap {
     //使用动态数组存储最大堆
@@ -16,25 +18,9 @@ public class MaxHeap {
         //构造方法的this的调用
         this(10);
     }
+    //初始化堆大小
     public MaxHeap(int size){
         data  = new ArrayList<>(10);
-    }
-    /**
-     * 任意数组的堆化
-     * 构造方法
-     * @param arr
-     */
-    public MaxHeap(int[ ] arr){
-        //初始化一个动态数组
-        data = new ArrayList<>(arr.length);
-        //1.先将数组中所有元素复制到data中
-        for (int i :arr) {
-            data.add(i);
-        }
-        //2.从最后一个元素开始不断元素下沉
-        for (int i=parent(data.size()-1); i >= 0;i--){
-            siftDown(i);
-        }
     }
 
     //判空方法
@@ -43,7 +29,7 @@ public class MaxHeap {
     }
 
     //根据索引得到父节点的索引
-    public int parent(int k){
+    private int parent(int k){
         return (k-1) >>1;
     }
 
@@ -86,6 +72,23 @@ public class MaxHeap {
           int temp = data.get(i);
           data.set(i,data.get(j));
           data.set(j,temp);
+    }
+    /**
+     * 任意数组的堆化
+     * 构造方法
+     * @param arr
+     */
+    public MaxHeap(int[ ] arr){
+        //初始化一个动态数组
+        data = new ArrayList<>(arr.length);
+        //1.先将数组中所有元素复制到data中
+        for (int i :arr) {
+            data.add(i);
+        }
+        //2.从最后一个元素开始不断元素下沉
+        for (int i=parent(data.size()-1); i >= 0;i--){
+            siftDown(i);
+        }
     }
     /**
      * 取出堆中最大值的方法
