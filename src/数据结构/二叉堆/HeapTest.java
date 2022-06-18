@@ -1,5 +1,7 @@
 package 数据结构.二叉堆;
 
+import java.util.Arrays;
+
 public class HeapTest {
     public static void main(String[] args) {
         MaxHeap heap =new MaxHeap();
@@ -8,6 +10,9 @@ public class HeapTest {
             heap.add(i);
         }
         heap.add(16);
-        System.out.println(heap);
+        for (int i = 0; i < arr.length; i++) {
+            arr[i]=heap.extractMax();
+        }
+        System.out.println(Arrays.toString(arr));
     }
 }
