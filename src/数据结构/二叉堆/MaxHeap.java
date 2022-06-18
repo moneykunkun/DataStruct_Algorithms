@@ -111,6 +111,14 @@ public class MaxHeap {
         siftDown(0);
         return max;
     }
+
+    public int peekMax(){
+        if (isEmpty()){
+            throw new NoSuchElementException("heap is empty!");
+        }
+        //堆顶元素就是最大值
+        return data.get(0);
+    }
     /**
      * 元素的下沉操作
      * @param k
