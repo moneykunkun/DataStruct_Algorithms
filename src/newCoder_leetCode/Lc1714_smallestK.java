@@ -5,6 +5,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 //面试题 17.14. 最小K个数
+//topK问题的两种解题思路：1.构造优先级队列，时间复杂度NlogK；2.排序，时间复杂度NlogN
 //https://leetcode.cn/problems/smallest-k-lcci/
 public class Lc1714_smallestK {
 
