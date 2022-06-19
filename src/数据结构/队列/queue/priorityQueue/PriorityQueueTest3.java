@@ -1,6 +1,5 @@
 package 数据结构.队列.queue.priorityQueue;
 
-
 import java.util.*;
 import java.util.PriorityQueue;
 
