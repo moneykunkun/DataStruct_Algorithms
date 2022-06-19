@@ -8,7 +8,7 @@ import java.util.Queue;
 //topK问题的两种解题思路：1.构造优先级队列，时间复杂度NlogK；2.排序，时间复杂度NlogN
 //https://leetcode.cn/problems/smallest-k-lcci/
 
-public class Lc1714_smallestK {
+public class Lc1714_topKSmallest {
 
     public int[] smallestK(int[] arr, int k) {
     //边界值条件
