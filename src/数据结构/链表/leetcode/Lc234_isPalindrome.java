@@ -3,7 +3,7 @@ package 数据结构.链表.leetcode;
 //  给你一个单链表的头节点 head ，请你判断该链表是否为回文链表。
 //  如果是，返回 true ；否则，返回 false
 public class Lc234_isPalindrome {
-    public boolean isPalindrome(ListNode head) {
+    public boolean isPalindrome(数据结构.链表.leetcode.ListNode head) {
     //找到中间节点
         ListNode middleNode =middleNode(head);
     //反转中间链表及其之后的链表
