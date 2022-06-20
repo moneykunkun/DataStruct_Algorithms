@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 /**
  * 堆排序
+ * 时间复杂度： nlogN
+ * 稳定排序算法
  */
 public class heapSort {
 
