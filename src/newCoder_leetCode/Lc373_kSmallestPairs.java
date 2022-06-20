@@ -50,6 +50,7 @@ public class Lc373_kSmallestPairs {
         }
         //此时，优先级队列中存储了和最小的前K个pair对象
         List<List<Integer>> ret =new ArrayList<>();
+        //细节之循环的终止范围
         for (int i = 0; i < k&&(!queue.isEmpty()); i++) {
             List<Integer> temp =new ArrayList<>();
             Pair pair =queue.poll();
