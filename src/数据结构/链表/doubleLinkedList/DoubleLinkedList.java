@@ -1,7 +1,5 @@
 package 数据结构.链表.doubleLinkedList;
 
-import 数据结构.链表.singleLinkedList.SingleList;
-
 public class DoubleLinkedList {
     private int size;                  //链表的元素个数
     private Node head;          //头节点
