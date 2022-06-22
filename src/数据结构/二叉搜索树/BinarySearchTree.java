@@ -1,6 +1,8 @@
 package 数据结构.二叉搜索树;
 
 
+import java.util.NoSuchElementException;
+
 /**
  * 基于整形的二分搜索树
  * jdk中的搜索树就是不存在相同的值TreeMap-key
@@ -78,6 +80,35 @@ public class BinarySearchTree {
             //在右树中查找
             return contains(root.right,val);
         }
+    }
+
+    /**
+     * 查找bst中的最小值
+     * @return
+     */
+    public int findMin(){
+        //判空
+        if(size==0){
+            //空树
+        throw new NoSuchElementException("bst is empty!");
+        }
+        TreeNode minNode =minNode(root);
+        return minNode.val;
+    }
+
+    /**
+     * 在以root为根节点的bst中查找最小值节点
+     * 思路：bst最小值，左树空，min=root，否则一直递归左子树
+     * @param root
+     * @return
+     */
+    private TreeNode minNode(TreeNode root) {
+        if (root.left==null){
+            //左树为空，最小值就是根节点
+            return root;
+        }
+        //左树不为空，一路向左，左子树
+        return minNode(root.left);
     }
 
     @Override
