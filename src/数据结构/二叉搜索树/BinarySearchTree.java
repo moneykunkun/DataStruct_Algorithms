@@ -87,7 +87,7 @@ public class BinarySearchTree {
     private String generateHeightStr(int height) {
         StringBuilder sb=new StringBuilder();
         for (int i = 0; i < height; i++) {
-            sb.append("-");
+            sb.append("--");
         }
         return sb.toString();
     }
