@@ -1,5 +1,6 @@
 package 数据结构.二叉搜索树;
 
+
 /**
  * 基于整形的二分搜索树
  * jdk中的搜索树就是不存在相同的值TreeMap-key
@@ -52,6 +53,32 @@ public class BinarySearchTree {
     }
     return root;
    }
+
+   public boolean contains(int val){
+       return contains(root,val);
+   }
+
+    /**
+     * 判断以root为根节点的bst中是否包含val
+     * @param root
+     * @param val
+     * @return
+     */
+    private boolean contains(TreeNode root, int val) {
+        if (root==null){
+            return false;
+        }
+        //根节点恰好值为val
+        if (root.val ==val) {
+            return true;
+        }else if (val <root.val){
+            //在左树中查找
+            return contains(root.left,val);
+        }else {
+            //在右树中查找
+            return contains(root.right,val);
+        }
+    }
 
     @Override
     public String toString() {
