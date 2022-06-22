@@ -29,15 +29,15 @@ public class BinarySearchTree {
    }
 
     /**
-     * 向以root为根节点的二叉树中添加元素
+     * 向以root为根节点的bst中添加元素，返回新的树根
      * @param root
      * @param val
      * @return
      */
    public TreeNode add(TreeNode root,int val){
-       //创建新的节点
-       TreeNode newNode =new TreeNode(val);
     if (root==null){
+        //创建新的节点
+        TreeNode newNode =new TreeNode(val);
         //此时添加的元素就是根节点
         size++;
         return newNode;
@@ -52,4 +52,44 @@ public class BinarySearchTree {
     }
     return root;
    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        generateBSTString(root,0,sb);
+        return sb.toString();
+    }
+    /**
+     * 先序遍历以root为根节点的BST，将节点值存到sb中
+     * @param root
+     * @param height
+     * @param sb
+     */
+    private void generateBSTString(TreeNode root, int height, StringBuilder sb) {
+        //边界条件
+        if (root == null){
+            sb.append(generateHeightStr(height)).append("NULL\n");
+            return;
+        }
+        sb.append(generateHeightStr(height)).append(root.val).append("\n");
+        //递归遍历左子树
+        generateBSTString(root.left,height+1,sb);
+        //递归遍历右子树
+        generateBSTString(root.right,height+1,sb);
+    }
+
+    /**
+     * 按照当前树所处的层次打印--
+     * 每多一层，就多两个--
+     * @param height
+     * @return
+     */
+    private String generateHeightStr(int height) {
+        StringBuilder sb=new StringBuilder();
+        for (int i = 0; i < height; i++) {
+            sb.append("-");
+        }
+        return sb.toString();
+    }
+
 }
