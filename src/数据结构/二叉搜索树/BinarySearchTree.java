@@ -111,6 +111,33 @@ public class BinarySearchTree {
         //左树不为空，一路向左左子树
         return minNode(root.left);
     }
+
+    /**
+     * 删除bst中的最小值，返回删除的节点值
+     * @return
+     */
+    public int removeMin(){
+        int min =findMin();
+        root=removeMin(root);
+        return min;
+    }
+
+    /**
+     * 在以root为根节点的bst中删除最小值
+     * @param root
+     * @return
+     */
+    private TreeNode removeMin(TreeNode root) {
+        if (root.left ==null){
+            //此时，根节点就是待删除的节点值,暂存一下右子树
+            TreeNode right =root.right;
+            //断开根节点
+            root.right =root =null;
+            return right;
+        }
+        return null;
+    }
+
     /**
      * 查找bst中的最大值
      * @return
