@@ -92,6 +92,7 @@ public class BinarySearchTree {
             //空树
         throw new NoSuchElementException("bst is empty!");
         }
+        //最小值节点
         TreeNode minNode =minNode(root);
         return minNode.val;
     }
@@ -107,9 +108,38 @@ public class BinarySearchTree {
             //左树为空，最小值就是根节点
             return root;
         }
-        //左树不为空，一路向左，左子树
+        //左树不为空，一路向左左子树
         return minNode(root.left);
     }
+    /**
+     * 查找bst中的最大值
+     * @return
+     */
+    public int findMax(){
+        //判空
+        if(size==0){
+            //空树
+            throw new NoSuchElementException("bst is empty!");
+        }
+        TreeNode maxNode =maxNode(root);
+        return maxNode.val;
+    }
+
+    /**
+     * 在以root为根节点的bst中查找最大值节点
+     * 思路：bst最大值，右树空，max=root，否则一直递归右子树
+     * @param root
+     * @return
+     */
+    private TreeNode maxNode(TreeNode root) {
+        if (root.right==null){
+            //右树为空，最大值就是根节点
+            return root;
+        }
+        //右树不为空，一路向右，右子树
+        return maxNode(root.right);
+    }
+
 
     @Override
     public String toString() {
