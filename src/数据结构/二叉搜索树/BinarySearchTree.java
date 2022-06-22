@@ -133,9 +133,12 @@ public class BinarySearchTree {
             TreeNode right =root.right;
             //断开根节点
             root.right =root =null;
+            size--;
             return right;
         }
-        return null;
+        //左树不为空，再递归去左树中删除
+        root.left= removeMin(root.left);
+        return root;
     }
 
     /**
@@ -167,6 +170,34 @@ public class BinarySearchTree {
         return maxNode(root.right);
     }
 
+
+    /**
+     * 删除bst中的最大值，返回最大值
+     * @return
+     */
+        public int removeMax(){
+        int max =findMax();
+        root =removeMax(root);
+        return max;
+        }
+
+    /**
+     * 删除以root为根节点的bst中查找最大值节点
+     * 思路：bst最大值，右树空，max=root，否则一直递归右子树
+     * @param root
+     * @return
+     */
+    private TreeNode removeMax(TreeNode root) {
+        if (root.right==null){
+            //右树为空，根节点就是最大值
+            TreeNode left =root.left;
+            root.left=root=null;
+            size--;
+            return left;
+        }
+        root.right= removeMax(root.right);
+        return root;
+    }
 
     @Override
     public String toString() {
