@@ -203,8 +203,9 @@ public class BinarySearchTree {
      * 删除bst中的节点值
      * @param val
      */
-    public  void remove(int val){
-        root =remove(root,val);
+
+    public void remove(int val){
+        root = remove(root,val);
     }
 
 
