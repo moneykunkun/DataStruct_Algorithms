@@ -2,11 +2,20 @@ package 数据结构.二叉搜索树;
 
 public class BSTTest {
     public static void main(String[] args) {
-        int[] data ={10,15,12,8,13,25,14,20};
+        int[] data ={1,10,15,12,8,50,13,25,14,20};
         BinarySearchTree bt =new BinarySearchTree();
         for (int i:data){
             bt.add(i);
         }
-        System.out.println();
+        System.out.println(bt);
+        System.out.println("------------");
+/*        System.out.println(bt.contains(15));
+        System.out.println(bt.contains(21));*/
+
+        System.out.println(bt.findMax());
+        bt.removeMax();
+        System.out.println("-----------------------");
+        System.out.println(bt);
+        //System.out.println(bt.findMax());
     }
 }

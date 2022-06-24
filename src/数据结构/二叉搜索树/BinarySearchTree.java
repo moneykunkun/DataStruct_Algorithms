@@ -199,6 +199,18 @@ public class BinarySearchTree {
         return root;
     }
 
+    /**
+     * 删除bst中的节点值
+     * @param val
+     */
+    public  void remove(int val){
+        root =remove(root,val);
+    }
+
+
+    private TreeNode remove(TreeNode root, int val) {
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
