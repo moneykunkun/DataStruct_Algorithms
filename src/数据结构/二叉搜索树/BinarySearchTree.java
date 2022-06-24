@@ -209,23 +209,45 @@ public class BinarySearchTree {
 
 
     /**
-     * 在以ront为根节点的二叉树中删除节点
+     * 在当前以root为根节点的BST中，删除值为val 的节点
      * @param root
      * @param val
      * @return
      */
     private TreeNode remove(TreeNode root, int val) {
-        //边界
-        if (root==null){
-            throw  new NoSuchElementException("BST is empty");
-        }else if ( val <root.val){
-            //此时待删除的节点位于左子树
-            root.left =remove(root.left,val);
+        //边界，所有节点中都不存在值为val的节点
+        if (root == null){
+            throw new NoSuchElementException("BST 中不存在值为"+val+"的数");
+        }else if (val <root.val){
+            //在左树中查找待删除的节点
+            root.left = remove(root.left,val);
+            return root;
         }else if (val >root.val){
-            //此时待删除的节点位于右子树
-            root.right =remove(root.right,val);
+            //在右树中查找待删除的节点
+            root.right = remove(root.right,val);
+            return root;
         }else {
-
+            //此时，root就是待删除的节点
+            //拼接root的左右子树
+            if (root.left ==null){
+                TreeNode right = root.right;
+                root.right = root =null;
+                size--;
+                return right;
+            }
+            //右树为空时
+            if (root.right == null){
+                TreeNode left = root.left;
+                root.left =root=null;
+                size--;
+                return left;
+            }
+            //此时，root的左右树都不为空时，使用hibbard deletion分析
+            TreeNode successor = removeMin(root.right);
+            successor.right = removeMin(root.right);
+            successor.left = root.left;
+            root.left = root.right =root =null;
+            return successor;
         }
     }
 
