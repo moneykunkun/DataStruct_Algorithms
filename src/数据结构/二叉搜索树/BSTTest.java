@@ -7,10 +7,11 @@ public class BSTTest {
         for (int i:data){
             bt.add(i);
         }
+        bt.removeMax();
         System.out.println(bt);
         System.out.println("------------");
 
-        bt.remove(50);
+        bt.remove(25);
         System.out.println("-----------------------");
         System.out.println(bt);
         //System.out.println(bt.findMax());
