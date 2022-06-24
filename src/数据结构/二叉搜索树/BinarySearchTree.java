@@ -208,7 +208,25 @@ public class BinarySearchTree {
     }
 
 
+    /**
+     * 在以ront为根节点的二叉树中删除节点
+     * @param root
+     * @param val
+     * @return
+     */
     private TreeNode remove(TreeNode root, int val) {
+        //边界
+        if (root==null){
+            throw  new NoSuchElementException("BST is empty");
+        }else if ( val <root.val){
+            //此时待删除的节点位于左子树
+            root.left =remove(root.left,val);
+        }else if (val >root.val){
+            //此时待删除的节点位于右子树
+            root.right =remove(root.right,val);
+        }else {
+
+        }
     }
 
     @Override
