@@ -9,11 +9,8 @@ public class BSTTest {
         }
         System.out.println(bt);
         System.out.println("------------");
-/*        System.out.println(bt.contains(15));
-        System.out.println(bt.contains(21));*/
 
-        System.out.println(bt.findMax());
-        bt.removeMax();
+        bt.remove(50);
         System.out.println("-----------------------");
         System.out.println(bt);
         //System.out.println(bt.findMax());
