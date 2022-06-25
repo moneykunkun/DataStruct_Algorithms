@@ -1,9 +1,15 @@
 package 数据结构.链表.leetcode;
 
+import 数据结构.链表.leetcode.ListNode;
 //  给你一个单链表的头节点 head ，请你判断该链表是否为回文链表。
 //  如果是，返回 true ；否则，返回 false
 public class Lc234_isPalindrome {
-    public boolean isPalindrome(数据结构.链表.leetcode.ListNode head) {
+    /**
+     * 判断单链表是否尾回文链表
+     * @param head
+     * @return
+     */
+    public boolean isPalindrome(ListNode head) {
     //找到中间节点
         ListNode middleNode =middleNode(head);
     //反转中间链表及其之后的链表
@@ -19,6 +25,11 @@ public class Lc234_isPalindrome {
         return  true;
     }
 
+    /**
+     * 查找链表的中间节点
+     * @param head
+     * @return
+     */
     public ListNode middleNode(ListNode head) {
         //快指针，从头开始，一次走两步
         ListNode fast =head;
@@ -31,16 +42,23 @@ public class Lc234_isPalindrome {
         }
         return low;
     }
-    //反转链表
+
+    /**
+     * 反转链表
+     * @param head
+     * @return
+     */
     public ListNode reverseList(ListNode head) {
+        //边界条件
         if (head ==null || head.next ==null){
             return head;
         }
-        ListNode sec =head.next;
-        //反转第二个节点之后的节点
+        //定义头节点后的节点
+        ListNode second =head.next;
+        //反转第二个节点之后的所有节点
         ListNode newHead =reverseList(head.next);
-        //将sec指向head，head指向空
-        sec.next =head;
+        //改变指针引用，将sec指向head，head指向空
+        second.next =head;
         head.next =null;
         return newHead;
     }
