@@ -16,8 +16,19 @@ public class Lc242_isAnagram {
         }
         char[] sChar =s.toCharArray();
         char[] tChar =t.toCharArray();
-        Arrays.sort(sChar);
-        Arrays.sort(tChar);
-        return Arrays.equals(sChar,tChar);
+
+        int[] dict =new int[26];
+        for (int i = 0; i <sChar.length ; i++) {
+            dict[sChar[i]='a']++;
+        }
+        for (int j = 0; j < tChar.length; j++) {
+            dict[tChar[j]='a']--;
+            if (dict[tChar[j]-'a']<0){
+                return false;
+            }
+        }
+        return true;
     }
+
+
 }
