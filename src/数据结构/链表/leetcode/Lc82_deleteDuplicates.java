@@ -1,6 +1,8 @@
 package 数据结构.链表.leetcode;
 
-
+/**
+ * 删除排序链表中的重复元素 II
+ */
 
 public class Lc82_deleteDuplicates {
     public ListNode deleteDuplicates(ListNode head) {
@@ -13,7 +15,9 @@ public class Lc82_deleteDuplicates {
         dummyHead.next =head;
         while (p.next != null){
             ListNode q= p.next;
-            while (q.next != null && q.next.val == q.val) q=q.next;
+            while (q.next != null && q.next.val == q.val) {
+                q=q.next;
+            }
             if (q == p.next){
                 p=p.next;
             }else {
@@ -23,3 +27,4 @@ public class Lc82_deleteDuplicates {
         return dummyHead.next;
     }
 }
+
