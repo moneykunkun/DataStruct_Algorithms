@@ -1,5 +1,7 @@
 package 数据结构.哈希表;
 
+import java.util.NoSuchElementException;
+
 /**
  * 自定义哈希表
  */
@@ -109,5 +111,40 @@ public class MyHashMap {
             }
         }
         return false;
+    }
+
+    /**
+     * 删除哈希表中key对应的value
+     * @param key
+     * @return
+     */
+    public int remove(int key){
+        //1.计算key对应的索引
+        int index =hash(key);
+        //2.判断头节点是否是待删除的节点
+        Node head =data[index];
+        if (head.key ==key){
+            int value =head.value;
+            data[index] =head.next;
+            //将头节点从链表中断开
+            head.next =head =null;
+            size--;
+            return value;
+        }
+        //当前链表的头节点不是待删除的节点
+        Node prev =head;
+        //向后遍历
+        while (prev.next !=null){
+            if (prev.next.value==key){
+                //此时，prev就是待删除节点的前驱节点
+                Node cur =prev.next;
+                prev.next =cur.next;
+                cur.next =cur =null;
+                size--;
+                return cur.value;
+            }
+        }
+        //分支走到这里的时候，表明链表中不存在这样的key对应的元素
+        throw new NoSuchElementException("No Such value!");
     }
 }
