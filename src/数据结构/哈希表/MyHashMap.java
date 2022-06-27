@@ -78,4 +78,36 @@ public class MyHashMap {
         return value;
     }
 
+    /**
+     * 判断当前哈希表中是否包含指定的key值
+     * @param key
+     * @return
+     */
+    public boolean containsKey(int key){
+        //1.先通过key值，计算key值对应的索引
+        int index =hash(key);
+        //2.遍历index对应的链表，查看是否右节点的key和查询的key相等
+        for (Node x=data[index]; x !=null;x =x.next){
+            if (x.key ==key){
+                return true;
+            }
+        }
+        return false;
+    }
+    /**
+     * 判断当前哈希表中是否包含指定的value值
+     * @param value
+     * @return
+     */
+    public boolean containsValue(int value){
+        //遍历整个哈希表
+        for (int i = 0; i < size; i++) {
+            for (Node x=data[i]; x!= null; x=x.next){
+                if (x.value ==value){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }

@@ -7,7 +7,10 @@ public class Test {
         map.add(1,10);
         map.add(2,20);
         map.add(5,55);
-        System.out.println();
+        System.out.println(map.containsKey(1));
+        System.out.println(map.containsKey(3));
+        System.out.println(map.containsValue(20));
+        System.out.println(map.containsValue(60));
     }
 
 }
