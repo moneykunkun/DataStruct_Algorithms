@@ -124,18 +124,17 @@ public class MyHashMap {
         //2.判断头节点是否是待删除的节点
         Node head =data[index];
         if (head.key ==key){
-            int value =head.value;
             data[index] =head.next;
             //将头节点从链表中断开
             head.next =head =null;
             size--;
-            return value;
+            return head.value;
         }
         //当前链表的头节点不是待删除的节点
         Node prev =head;
         //向后遍历
         while (prev.next !=null){
-            if (prev.next.value==key){
+            if (prev.next.key==key){
                 //此时，prev就是待删除节点的前驱节点
                 Node cur =prev.next;
                 prev.next =cur.next;
@@ -145,6 +144,8 @@ public class MyHashMap {
             }
         }
         //分支走到这里的时候，表明链表中不存在这样的key对应的元素
-        throw new NoSuchElementException("No Such value!");
+        throw new NoSuchElementException("No Such key!");
     }
+
+
 }
