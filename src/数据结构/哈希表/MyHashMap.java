@@ -71,9 +71,10 @@ public class MyHashMap {
         data[index] =node;
         size++;
         //4.添加一个新的元素后，查看是否需要扩容
-        if((size/LOAD_FACTOR )>=data.length){
+        if(data.length*LOAD_FACTOR <=size){
             //TODO:哈希表篇需要扩容
         }
+        //返回添加的元素
         return value;
     }
 
