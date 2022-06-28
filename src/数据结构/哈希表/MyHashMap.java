@@ -175,6 +175,7 @@ public class MyHashMap {
                 size--;
                 return cur.value;
             }
+            prev =prev.next;
         }
         //分支走到这里的时候，表明链表中不存在这样的key对应的元素
         throw new NoSuchElementException("No Such key!");
