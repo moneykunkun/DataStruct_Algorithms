@@ -74,10 +74,43 @@ public class MyHashMap {
         size++;
         //4.添加一个新的元素后，查看是否需要扩容
         if(data.length*LOAD_FACTOR <=size){
-            //TODO:哈希表篇需要扩容
+            //TODO:哈希表需要扩容
+        revise();
         }
         //返回添加的元素
         return value;
+    }
+
+    /**
+     * 扩容操作
+     */
+    private void revise() {
+        //将数组的扩容2倍
+        Node[] newData =new Node[data.length<<1];
+        //哈希运算的M值为新数字的长度
+        this.M =newData.length;
+        //遍历原数组，进行节点的迁移
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] !=null){
+                //表明此处的链表不为空
+                //对此处的链表进行遍历
+                for (Node x =data[i]; x!=null;){
+                    //暂存一下后继节点
+                    Node next =x.next;
+                    //新数组的索引
+                    int newIndex =hash(x.key);
+                    //将节点头插到新数组的索引位置
+                    x.next =newData[newIndex];
+                    newData[newIndex] =x;
+                    //继续进行下一个节点的迁移
+                    x=next;
+                }
+            }else {
+                //当前索引位置没有节点
+                continue;
+            }
+        }
+        data =newData;
     }
 
     /**

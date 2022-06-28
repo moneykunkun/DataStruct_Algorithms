@@ -7,7 +7,7 @@ public class Test {
         map.add(1,10);
         map.add(2,20);
         map.add(5,55);
-        map.remove(3);
+        System.out.println();
     }
 
 }
