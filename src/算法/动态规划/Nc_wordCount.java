@@ -17,7 +17,6 @@ public class Nc_wordCount {
      * 所以计算的时候应该以长度作为变量遍历len1到len2之间的字符串个数，最后相加。
      */
     public  static void main(String args[]){
-
         Scanner sc =new Scanner(System.in);
         while(sc.hasNext()){
             String str1 =sc.next();
