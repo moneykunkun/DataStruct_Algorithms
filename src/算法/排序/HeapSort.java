@@ -7,7 +7,7 @@ import java.util.Arrays;
  * 时间复杂度： nlogN
  * 稳定排序算法
  */
-public class heapSort {
+public class HeapSort {
 
     /**
      * 堆排序

@@ -9,6 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * 快速排序
  */
 public class QuickSort {
+
     //快速排序的基准值选择--随机数选择
     private static final ThreadLocalRandom random =ThreadLocalRandom.current();
     /**
