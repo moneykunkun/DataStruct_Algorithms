@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 /**
  * 双向选择排序
+ * 时间复杂度 ：O（n^2）
+ * 不稳定
+ * 性能优于单向选择排序
  */
 public class SelectSortOP {
 
