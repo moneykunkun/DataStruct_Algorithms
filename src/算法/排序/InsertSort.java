@@ -11,6 +11,7 @@ public class InsertSort {
      * 时间复杂度:O（n^2）
      * 稳定排序算法
      * 在近乎有序的数组排序时，性能甚至优于NlogN排序算法
+     * 插入排序经常用作高阶排序算法的优化手段
      * @param arr
      */
 
@@ -33,6 +34,36 @@ public class InsertSort {
         }
     }
 
+
+    /**
+     * 优化：折半插入排序
+     * @param arr
+     */
+    public static void insertSortBs(int[] arr){
+        //已排序区间[0,i)
+        //无序区间[i,n]
+        for (int i = 1; i < arr.length ; i++) {
+            int val =arr[i];        //待插入元素
+            //有序区间的索引
+            int left=0;
+            int right=i;
+            while (left<right){
+                //找到有序区间的中间位置
+                int mid=left+((right-left)>>1);
+                if (val<arr[mid]){
+                    right=mid;
+                }else {
+                    left=mid+1;
+                }
+            }
+            //搬移 left-->i 的元素
+            for (int j = i; j >left ; j--) {
+                arr[j]=arr[j-1];
+            }
+            //left就是val插入的位置
+            arr[left]=val;
+        }
+    }
     private static void swap(int[] arr, int i, int j) {
         int temp= arr[i];
         arr[i] =arr[j];
@@ -41,7 +72,10 @@ public class InsertSort {
 
     public static void main(String[] args) {
         int[] arr ={12,7,4,18,5,19,30,22,8,25,68,11,30};
+        int[] arr1 ={12,7,4,18,5,19,30,22,8,25,68,11,30};
         insertSort(arr);
+        insertSortBs(arr1);
         System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr1));
     }
 }
