@@ -7,6 +7,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * 快速排序
+ *
+ * 时间复杂度：NlogN
+ * 不稳定
  */
 public class QuickSort {
 
