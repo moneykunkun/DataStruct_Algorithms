@@ -19,28 +19,28 @@ public class Lc155_minStack {
 
     //入栈操作
     public void push(int val) {
-     stack.push(val);
+     this.stack.push(val);
     if (minStack.empty()){
-        minStack.push(val);
+        this.minStack.push(val);
     }else {
         //minStack不为空，取出minStack栈顶元素和当前入栈元素比较，将小值入栈
         int temp =minStack.peek();
-        minStack.push(Math.min(temp,val));
+        this.minStack.push(Math.min(temp,val));
     }
     }
     //出栈操作
     public void pop() {
-        stack.pop();
-        minStack.pop();
+        this.stack.pop();
+        this.minStack.pop();
     }
 
     //取出栈顶元素
     public int top() {
-    return stack.peek();
+    return this.stack.peek();
     }
 
     public int getMin() {
         //最小值在s2中存储
-    return minStack.peek();
+    return this.minStack.peek();
     }
 }
