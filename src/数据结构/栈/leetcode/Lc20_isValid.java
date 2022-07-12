@@ -16,7 +16,7 @@ public class Lc20_isValid {
                     //栈为空，表示没有和右括号匹配的左括号
                     return false;
                 }
-                //弹出栈顶元素
+                //取出栈顶元素
                 char top =stack.pop();
                 if (c==')' && top !='('){
                         return false;
