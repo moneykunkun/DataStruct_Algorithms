@@ -9,6 +9,8 @@ import java.util.concurrent.ThreadLocalRandom;
  * 快速排序
  *
  * 时间复杂度：NlogN
+ * 最坏情况O（N^2）
+ * 空间复杂度:
  * 不稳定
  */
 public class QuickSort {
