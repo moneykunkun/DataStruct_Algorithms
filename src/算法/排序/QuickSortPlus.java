@@ -27,8 +27,17 @@ public class QuickSortPlus {
             }else {
                 arr[left] =arr[right];
             }
+            while (left <right &&arr[left] <=tmp){
+                left++;
+            }
+            if (left>=right){
+                arr[left] =tmp;
+                break;
+            }else {
+                arr[right] =arr[left];
+            }
         }
-
+        return tmp;
     }
     /**
      * 快速排序
