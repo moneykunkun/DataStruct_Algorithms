@@ -1,5 +1,7 @@
 package 算法.排序;
 
+import java.util.Arrays;
+
 public class QuickSortPlus {
 
 
@@ -46,7 +48,9 @@ public class QuickSortPlus {
     public static void quickSort(int[] arr,int left,int right){
 
         //找到基准值
-        if (left>=right) return;
+        if (left>=right) {
+            return;
+        }
 
         //找到基准值
         int pivot=partition(arr,left,right);
@@ -56,4 +60,10 @@ public class QuickSortPlus {
         //递归基准值的右区间
         quickSort(arr,pivot+1,right);
         }
+
+    public static void main(String[] args) {
+        int[] arr ={1,12,3,7,2,5,10,16};
+        quickSort(arr,0,arr.length-1);
+        System.out.println(Arrays.toString(arr));
+    }
 }
