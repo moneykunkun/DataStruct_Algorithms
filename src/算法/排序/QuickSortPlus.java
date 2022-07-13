@@ -20,6 +20,13 @@ public class QuickSortPlus {
             while (left <right &&arr[right] >=tmp){
                 right--;
             }
+            //两指针相遇
+            if (left>=right){
+                arr[left] =tmp;
+                break;
+            }else {
+                arr[left] =arr[right];
+            }
         }
 
     }
