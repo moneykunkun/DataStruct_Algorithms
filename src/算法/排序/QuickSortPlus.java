@@ -11,7 +11,16 @@ public class QuickSortPlus {
      * @return
      */
     public static int partition(int[] arr,int left,int right){
+        //1.找临时基准值
+        int tmp =arr[left];
 
+        while (left<right){
+
+            //从后往前看，和基准值比较
+            while (left <right &&arr[right] >=tmp){
+                right--;
+            }
+        }
 
     }
     /**
