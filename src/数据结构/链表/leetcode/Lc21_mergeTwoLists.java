@@ -31,4 +31,23 @@ public class Lc21_mergeTwoLists {
         }
         return dummyHead.next;
     }
+
+    /**
+     * 递归写法
+     * @param list1
+     * @param list2
+     * @return
+     */
+    public ListNode mergeTwoLists2(ListNode list1, ListNode list2) {
+        if(list1 ==null){ return list2; }
+        if(list2 ==null){ return list1; }
+        //此时，两个链表都不为空，开始合并
+        if(list1.val <= list2.val){
+            list1.next=mergeTwoLists(list1.next,list2);
+            return list1;
+        }else{
+            list2.next =mergeTwoLists(list1,list2.next);
+            return list2;
+        }
+    }
 }
