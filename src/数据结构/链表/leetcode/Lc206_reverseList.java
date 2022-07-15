@@ -7,6 +7,7 @@ public class Lc206_reverseList {
      * @return
      */
     //解法一 改变链表的指向
+    //三引用
     public ListNode reverseList(ListNode head) {
         if (head ==null || head.next ==null){
             return head;
