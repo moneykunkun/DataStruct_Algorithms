@@ -18,7 +18,7 @@ public class Lc19_removeNthFromEnd {
             ListNode fast =dummyHead;
             ListNode slow =dummyHead;
 
-            //先让快指针走k+1步
+            //先让快指针走n+1步
             for (int i = 0; i <=n ; i++) {
                 fast =fast.next;
             }
