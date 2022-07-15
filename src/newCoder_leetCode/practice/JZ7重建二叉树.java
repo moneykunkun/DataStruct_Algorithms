@@ -6,7 +6,6 @@ public class JZ7重建二叉树 {
         int val;
         TreeNode left;
         TreeNode right;
-
         TreeNode(int x) {
             val = x;
         }
