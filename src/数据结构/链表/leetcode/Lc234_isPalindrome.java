@@ -1,6 +1,5 @@
 package 数据结构.链表.leetcode;
 
-import 数据结构.链表.leetcode.ListNode;
 //  给你一个单链表的头节点 head ，请你判断该链表是否为回文链表。
 //  如果是，返回 true ；否则，返回 false
 public class Lc234_isPalindrome {
