@@ -19,7 +19,6 @@ public class Num225_byOne {
             queue.offer(queue.poll());
         }
     }
-
     public int pop() {
         return queue.poll();
     }
