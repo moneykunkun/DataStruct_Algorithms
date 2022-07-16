@@ -3,6 +3,7 @@ package 数据结构.链表.leetcode;
 //牛客
 //https://www.nowcoder.com/questionTerminal/d281619e4b3e4a60a2cc66ea32855bfa
 public class Nc_PalindromeList {
+
     public boolean chkPalindrome(ListNode A) {
         // write code here
         //先找到中间节点
