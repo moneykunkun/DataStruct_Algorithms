@@ -8,6 +8,7 @@ import java.util.Queue;
  * 并支持普通栈的全部四种操作（push、top、pop 和 empty）。
  */
 public class Num225_queue2stack {
+
     private  Queue<Integer> q1 =new LinkedList<>();             //实际存储元素的栈
     private  Queue<Integer> q2 =new LinkedList<>();             //辅助队列
     public Num225_queue2stack() { }
