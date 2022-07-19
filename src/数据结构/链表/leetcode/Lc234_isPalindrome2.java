@@ -3,7 +3,7 @@ package 数据结构.链表.leetcode;
  * 回文链表
  */
 public class Lc234_isPalindrome2 {
-    public boolean isPalindrome(数据结构.链表.leetcode.ListNode head) {
+    public boolean isPalindrome(ListNode head) {
         //创建一个新链表，新链表是原链表的倒置
         ListNode newHead= reverse(head);
         //同步遍历两个链表，发现有值不相等时，return false
