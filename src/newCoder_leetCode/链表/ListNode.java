@@ -1,4 +1,4 @@
-package newCoder_leetCode.practice;
+package newCoder_leetCode.链表;
 
 public class ListNode {
     int val;

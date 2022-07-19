@@ -1,4 +1,4 @@
-package newCoder_leetCode.practice;
+package newCoder_leetCode.链表;
 
 import java.util.HashSet;
 import java.util.Set;

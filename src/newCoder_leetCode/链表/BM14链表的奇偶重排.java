@@ -1,4 +1,4 @@
-package newCoder_leetCode.practice;
+package newCoder_leetCode.链表;
 
 public class BM14链表的奇偶重排 {
 

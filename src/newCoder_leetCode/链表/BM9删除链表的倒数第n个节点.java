@@ -1,4 +1,4 @@
-package newCoder_leetCode.practice;
+package newCoder_leetCode.链表;
 
 public class BM9删除链表的倒数第n个节点 {
     /**

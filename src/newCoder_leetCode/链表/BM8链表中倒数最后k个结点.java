@@ -1,4 +1,4 @@
-package newCoder_leetCode.practice;
+package newCoder_leetCode.链表;
 
 public class BM8链表中倒数最后k个结点 {
     /**

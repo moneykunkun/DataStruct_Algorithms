@@ -1,4 +1,4 @@
-package newCoder_leetCode.practice;
+package newCoder_leetCode.链表;
 
 import java.util.ArrayList;
 public class JZ6从尾到头打印链表 {
