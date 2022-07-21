@@ -2,6 +2,12 @@ package newCoder101.二叉树;
 
 public class BM29二叉树中和为某一值的路径 {
 
+    /**
+     * 递归写法
+     * @param root
+     * @param sum
+     * @return
+     */
     public boolean hasPathSum (TreeNode root, int sum) {
         // write code here
         if(root ==null){
