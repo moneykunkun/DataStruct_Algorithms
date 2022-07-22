@@ -1,7 +1,5 @@
 package 数据结构.二叉搜索树;
 
-
-
 public class Lc450_deleteNode {
 
     private class TreeNode {
