@@ -20,19 +20,6 @@ public class BM83字符串变形 {
                 sb.append(c);
             }
         }
-            //再将原sb转为字符串
-            String newString = sb.toString();
-            //按空格拆分
-            String[] split = newString.split(" ");
-            StringBuilder ansSb = new StringBuilder();
-            for (int i = split.length - 1; i >= 0; i--) {
-                //从后往前拼接
-                ansSb.append(split[i]);
-                //每个字符串拼接一个空格
-                if (i != 0) {
-                    ansSb.append(" ");
-                }
-            }
-            return ansSb.toString();
+
         }
     }
