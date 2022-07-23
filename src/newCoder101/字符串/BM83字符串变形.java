@@ -1,5 +1,7 @@
 package newCoder101.字符串;
 
+import java.util.Stack;
+
 public class BM83字符串变形 {
 
     public String trans(String s, int n) {
@@ -20,6 +22,16 @@ public class BM83字符串变形 {
                 sb.append(c);
             }
         }
-
+        String newStr =sb.toString();
+        StringBuilder stringBuilder =new StringBuilder();
+        Stack<String> stack =new Stack<>();
+         String[] split = newStr.split(" ");
+        for (String s1 : split) {
+            stack.push(s);
         }
+        while (!stack.isEmpty()){
+            stringBuilder.append(stack.pop()+" ");
+        }
+        return stringBuilder.toString();
+    }
     }
