@@ -6,6 +6,7 @@ import java.util.Stack;
 //将一句话的单词进行倒置，标点不倒置。比如 I like beijing. 经过函数后变为：beijing. like I
 //https://www.nowcoder.com/questionTerminal/b0ae3d72444a40e2bb14af7d4cb856ba
 public class Nc_reverStr {
+
     public static void main(String[] args) {
         Scanner in =new Scanner(System.in);
         String str =in.nextLine();
