@@ -18,6 +18,7 @@ public class MaxHeap {
         //构造方法的this的调用
         this(10);
     }
+
     //初始化堆大小
     public MaxHeap(int size){
         data  = new ArrayList<>(10);
