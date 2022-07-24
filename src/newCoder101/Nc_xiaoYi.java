@@ -7,6 +7,7 @@ import java.util.Scanner;
 //链接：https://www.nowcoder.com/questionTerminal/fe6c73cb899c4fe1bdd773f8d3b42c3d
 //来源：牛客网
 public class Nc_xiaoYi {
+
     public static void main(String[] args) throws IOException {
         Scanner in =new Scanner(System.in);
        while (in.hasNext()){
