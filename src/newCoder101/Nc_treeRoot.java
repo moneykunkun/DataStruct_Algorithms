@@ -7,6 +7,7 @@ import java.util.Scanner;
 //https://www.nowcoder.com/questionTerminal/e2422543519249f292d8435394ab82fe
 
 public class Nc_treeRoot {
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         while (in.hasNext()) {
