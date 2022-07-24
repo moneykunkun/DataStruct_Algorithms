@@ -10,6 +10,7 @@ import java.util.Set;
  *         返回true，因为”alibaba”可以被分割成”ali,ba”.
  */
 public class WordBreak {
+
     public boolean wordBreak(String s, Set<String> dict){
         //创建一个数组，保存字符串是否可被分割的状态
         boolean[] canBreak =new boolean[s.length()+1];
