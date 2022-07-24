@@ -5,6 +5,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Test {
 
     public static void main(String[] args) {
+
     int[] data =new int[100000];
         //生成0-整形最大值的随机数
         ThreadLocalRandom random =ThreadLocalRandom.current();
