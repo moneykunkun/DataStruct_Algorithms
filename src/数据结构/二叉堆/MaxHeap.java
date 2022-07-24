@@ -91,6 +91,31 @@ public class MaxHeap {
         }
     }
     /**
+     * 元素的下沉操作
+     * @param k
+     */
+    private void siftDown(int k) {
+        //还存在子树
+        while (leftChild(k) < data.size()){
+            int j= leftChild(k);
+            //判断是否有右子树
+            if ( j+1 < data.size() && data.get(j+1) > data.get(j)){
+                //右子树存在且大于左子树
+                j=j+1;
+            }
+            //此时，j就是左右子树的最大值，再和k比较
+            if(data.get(k) >= data.get(j)){
+                //当前节点值大于子树节点值，下沉结束
+                break;
+            }else {
+                //交换节点值
+                swap(k,j);
+                k = j;
+            }
+        }
+    }
+
+    /**
      * 取出堆中最大值的方法
      * @param
      * @return
@@ -118,30 +143,6 @@ public class MaxHeap {
         }
         //堆顶元素就是最大值
         return data.get(0);
-    }
-    /**
-     * 元素的下沉操作
-     * @param k
-     */
-    private void siftDown(int k) {
-        //还存在子树
-        while (leftChild(k) < data.size()){
-            int j= leftChild(k);
-            //判断是否有右子树
-            if ( j+1 < data.size() && data.get(j+1) > data.get(j)){
-                //右子树存在且大于左子树
-                j=j+1;
-            }
-            //此时，j就是左右子树的最大值，再和k比较
-            if(data.get(k) >= data.get(j)){
-                //当前节点值大于子树节点值，下沉结束
-                break;
-            }else {
-                //交换节点值
-                swap(k,j);
-                k = j;
-            }
-        }
     }
 
     @Override
