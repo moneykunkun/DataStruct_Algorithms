@@ -7,6 +7,7 @@ import java.util.Scanner;
 //牛牛有一个长度为n的整数数组A,他现在有一个任务是把数组A分为若干段排序子序列,牛牛想知道他最少可以把这个数组分为几段排序子序列.
 //如样例所示,牛牛可以把数组A划分为[1,2,3]和[2,2,1]两个排序子序列,至少需要划分为2个排序子序列,所以输出2
 public class Nc_sortStr {
+
         public static void main(String[] args) {
             Scanner in =new Scanner(System.in);
             int len = in.nextInt();
