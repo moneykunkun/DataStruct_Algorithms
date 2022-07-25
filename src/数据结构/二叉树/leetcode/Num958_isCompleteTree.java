@@ -15,13 +15,14 @@ public class Num958_isCompleteTree {
      * @return
      */
     public boolean isCompleteTree(TreeNode root) {
+
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
         boolean isSecondStep = false;
          //循环条件
         while (! queue.isEmpty()){
             TreeNode cur = queue.poll();
-            if (! isSecondStep){    //状态一
+            if (!isSecondStep){    //状态一
                 if (cur.left != null && cur.right != null){
                     queue.offer(cur.left);
                     queue.offer(cur.right);
