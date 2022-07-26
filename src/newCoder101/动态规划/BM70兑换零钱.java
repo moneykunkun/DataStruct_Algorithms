@@ -7,7 +7,9 @@ public class BM70兑换零钱 {
     public int minMoney (int[] arr, int aim) {
         // write code here
         //小于1都返回0
-        if(aim<1) return 0;
+        if(aim<1) {
+            return 0;
+        }
         int[] dp =new int[aim+1];
         //dp[i] 表示凑齐i元需要的货币数
         Arrays.fill(dp,aim+1);
