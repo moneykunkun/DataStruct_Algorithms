@@ -5,7 +5,9 @@ public class BM71最长上升子序列 {
     public int LIS (int[] arr) {
         // write code here
         // write code here
-        if(arr.length==0) return 0;
+        if(arr.length==0) {
+            return 0;
+        }
         int[] dp =new int[arr.length];
         dp[0] =1;
         //保存最大长度的个数
