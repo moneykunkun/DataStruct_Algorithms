@@ -5,6 +5,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class PriorityQueueTest1 {
+
     static class Student{
         String name;
         int age;

@@ -9,6 +9,7 @@ import java.util.PriorityQueue;
 public class PriorityQueueTest3 {
 
     static class Student implements Comparable<Student>{
+        //一个类一旦实现了Comparable接口，就表明当前类具备了可比较大小的能力
         String name;
         int age;
         public Student(String name,int age) {
