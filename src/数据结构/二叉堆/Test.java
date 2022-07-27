@@ -14,6 +14,7 @@ public class Test {
         for (int i = 0; i < data.length ; i++) {
             data[i] =random.nextInt(0,Integer.MAX_VALUE);
         }
+//        HeapSort.heapSort(data);
         MaxHeap heap =new MaxHeap();
         for (int i:data){
             heap.add(i);
