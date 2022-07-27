@@ -5,7 +5,7 @@ import 数据结构.队列.queue.Queue;
 import java.util.Arrays;
 
 /**
- * 自定义最大堆实现
+ * 自定义最大堆测试
  */
 public class PriorityQueueTest {
     public static void main(String[] args) {
