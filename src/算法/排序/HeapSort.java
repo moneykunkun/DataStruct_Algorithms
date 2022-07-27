@@ -63,7 +63,7 @@ public class HeapSort {
     }
 
     public static void main(String[] args) {
-        int[]  arr={7,1,6,3,8,10,9,2,4,5};
+        int[]  arr={27,1,6,23,8,10,9,2,4,5,18,20,35,7,11,48};
         heapSort(arr);
         System.out.println(Arrays.toString(arr));
     }
