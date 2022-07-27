@@ -1,5 +1,7 @@
 package 数据结构.二叉堆;
 
+import 算法.排序.HeapSort;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Test {
