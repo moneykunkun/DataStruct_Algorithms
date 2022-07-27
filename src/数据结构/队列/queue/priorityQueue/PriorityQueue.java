@@ -8,6 +8,7 @@ import 数据结构.队列.queue.Queue;
  * 基于最大堆的优先级队列，值越大优先级越高
  */
 public class PriorityQueue implements Queue<Integer> {
+
     private MaxHeap heap;
 
     public PriorityQueue(){
@@ -20,11 +21,13 @@ public class PriorityQueue implements Queue<Integer> {
 
     @Override
     public Integer poll() {
+        //优先级队列中出队操作就是取出当前队列的最大值
         return heap.extractMax();
     }
 
     @Override
     public Integer peek() {
+        //返回队列中的最大值
         return heap.peekMax();
     }
 
