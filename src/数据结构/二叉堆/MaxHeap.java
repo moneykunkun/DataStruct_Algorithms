@@ -91,6 +91,28 @@ public class MaxHeap {
             siftDown(i);
         }
     }
+
+    /**
+     * 取出堆中最大值的方法
+     * @param
+     * @return
+     */
+    public int extractMax(){
+        //取值一定要判空
+        if (data.isEmpty()){
+            throw new NoSuchElementException("heap is empty!cannot extract");
+        }
+        //堆顶元素就是最大值
+        int max = data.get(0);
+        //1.将数组末尾的元素顶到堆顶
+        int lastVal = data.get(data.size()-1);
+        data.set(0, lastVal);
+        //2.删除数组末尾的元素
+        data.remove(data.size()-1);
+        //3.进行元素的下沉操作
+        siftDown(0);
+        return max;
+    }
     /**
      * 元素的下沉操作
      * @param k
@@ -114,28 +136,6 @@ public class MaxHeap {
                 k = j;
             }
         }
-    }
-
-    /**
-     * 取出堆中最大值的方法
-     * @param
-     * @return
-     */
-    public int extractMax(){
-        //取值一定要判空
-        if (data.isEmpty()){
-            throw new NoSuchElementException("heap is empty!cannot extract");
-        }
-        //堆顶元素就是最大值
-        int max = data.get(0);
-        //1.将数组末尾的元素顶到堆顶
-        int lastVal = data.get(data.size()-1);
-        data.set(0, lastVal);
-        //2.删除数组末尾的元素
-        data.remove(data.size()-1);
-        //3.进行元素的下沉操作
-        siftDown(0);
-        return max;
     }
 
     public int peekMax(){
