@@ -8,7 +8,6 @@ import java.util.NoSuchElementException;
  * 最大堆问题
  * 1.最大堆首先再结构上和满二叉树相似
  * 2.最大堆满足：根节点值 >= 子节点的值
- *
  * 根节点从0开始
  */
 public class MaxHeap {
