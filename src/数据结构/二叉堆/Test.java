@@ -23,6 +23,11 @@ public class Test {
         System.out.println(isSorted(data));
     }
 
+    /**
+     * 判断数组是否有序
+     * @param data
+     * @return
+     */
     private static boolean isSorted(int[] data) {
         for (int i = 0; i < data.length-1; i++) {
             if (data[i]<data[i+1]){
