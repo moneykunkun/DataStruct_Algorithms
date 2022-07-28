@@ -63,7 +63,7 @@ public class SortHelper {
      * @param arr
      */
     public static void testSort(String sortName,int[] arr){
-        Class<HeapSort> cls =HeapSort.class;      //获取反射对象
+        Class<SevenSort> cls =SevenSort.class;      //获取反射对象
         try {
             Method method =cls.getDeclaredMethod(sortName,int[].class);
             long start =System.nanoTime();          //获取系统的时间，纳秒为单位
