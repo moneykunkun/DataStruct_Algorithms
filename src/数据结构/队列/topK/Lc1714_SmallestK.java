@@ -6,6 +6,12 @@ import java.util.Queue;
 
 public class Lc1714_SmallestK {
 
+    /**
+     * 数组中前K个最小数
+     * @param arr
+     * @param k
+     * @return
+     */
     public int[] smallestK(int[] arr, int k) {
     //边界条件
         if (arr.length ==0 || k==0){
