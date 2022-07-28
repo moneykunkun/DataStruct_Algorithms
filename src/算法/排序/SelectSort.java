@@ -8,6 +8,7 @@ import java.util.Arrays;
  * 不稳定
  */
 public class SelectSort {
+
     public static void selectionSort(int[] arr){
         //优化
         if (arr==null || arr.length<2){
@@ -15,17 +16,18 @@ public class SelectSort {
             return;
         }
         for (int i=0;i<arr.length-1;i++){
-            //min对应集合最小值的索引
+            //min对应无序最小值的索引
             int min=i;
             for (int j=i+1;j<arr.length;j++){
                 //更新最小元素的索引
                 min =arr[j]<arr[min] ?j:min;
             }
-            //交换索引
+            //经过内层循环，min对应无序区间的最小值，将最小值交换到有序区间
             swap(arr,i,min);
         }
     }
 
+    //交换元素
     private static void swap(int[] arr, int i, int j) {
     int temp= arr[i];
     arr[i] =arr[j];
