@@ -54,6 +54,38 @@ public class SevenSort {
         }
     }
 
+    /**
+     * 双相选择排序
+     * 性能优于单向选择排序
+     * @param arr
+     */
+    public static void selectionSortOP(int[] arr){
+        //定义两个变量分别从数组的头尾双向选择
+        int low=0;
+        int high=arr.length-1;
+       while (low<high){
+            int min=low;            //最小值对应的索引
+            int max=low;            //最大值对应的索引
+           for (int i = low+1; i <=high ; i++) {
+                if (arr[i]<arr[min]){
+                    min=i;
+                }
+                if (arr[i]>arr[max]){
+                    max =i;
+                }
+           }
+        //经过以上循环，min对应区间的最小值，max对应区间的最大值
+           //交换min和low位置
+           swap(arr,min,low);
+           if (max ==low){
+               //最大值已经被交换到min这个位置
+               max =min;
+           }
+           swap(arr,max,high);
+           low+=1;
+           high-=1;
+        }
+    }
     //交换元素
     private static void swap(int[] arr, int i, int j) {
         int temp= arr[i];
