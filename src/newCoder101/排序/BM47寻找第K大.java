@@ -1,4 +1,4 @@
-package newCoder101.堆栈队列;
+package newCoder101.排序;
 
 
 public class BM47寻找第K大 {
