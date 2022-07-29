@@ -97,6 +97,7 @@ public class SevenSort {
      * 直接插入排序
      * 时间复杂度：O(N^2)
      * 稳定
+     * 当插入排序当前遍历的元素>前驱元素时，此时可以提前结束内层循环
      * 在近乎有序的数集上，直接插入排序性能非常好，甚至由于NlogN的排序算法
      * 插入排序常常作为高阶排序算法的优化算法
      * @param arr
@@ -116,6 +117,34 @@ public class SevenSort {
            /* for (int j=i;j>0 &&arr[j]<arr[j-1];j--){
                 swap(arr,j,j-1);
             }*/
+        }
+    }
+
+    /**
+     * 二分插入排序---插入排序的优化
+     * @param arr
+     */
+    public static void insertionSortBS(int[] arr){
+        //有序区间：[0,i)        无序区间：[i,n]
+        for(int i=1;i< arr.length;i++){
+            int val =arr[i];        //无序区间待插入的元素
+            int left=0;             //有序区间的初始位置
+            int right=i;            //无序区间的初始位置
+            while (left<right){
+                int mid =left+((right-left)>>1);              //相当于（left+right）/2
+                if (val < arr[mid]) {
+                    right=mid;
+                }else {
+                    //val>arr[mid]
+                    left=mid+1;
+                }
+            }
+            //搬移[left,i]的元素
+            for (int j=i;j>left;j--){
+                arr[j]=arr[j-1];
+            }
+            //left就是val插入的位置
+            arr[left] =val;
         }
     }
     /**
