@@ -94,6 +94,31 @@ public class SevenSort {
     }
 
     /**
+     * 直接插入排序
+     * 时间复杂度：O(N^2)
+     * 稳定
+     * 在近乎有序的数集上，直接插入排序性能非常好，甚至由于NlogN的排序算法
+     * 插入排序常常作为高阶排序算法的优化算法
+     * @param arr
+     */
+    public static void insertionSort(int[] arr){
+        for (int i = 1; i < arr.length ; i++) {
+            //从待排序区间不断向前看，找到合适的插入位置
+            for (int j = i; j >0 ; j--) {
+                if (arr[j]>=arr[j-1]){
+                    //表明arr[j]已经有序，相等也不交换，保证稳定性
+                    break;
+                }else {
+                    swap(arr,j,j-1);
+                }
+            }
+            //以上代码等同于
+           /* for (int j=i;j>0 &&arr[j]<arr[j-1];j--){
+                swap(arr,j,j-1);
+            }*/
+        }
+    }
+    /**
      * 堆排序
      * 时间复杂度： nlogN
      * 稳定排序算法
