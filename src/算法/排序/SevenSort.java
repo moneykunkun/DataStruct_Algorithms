@@ -121,7 +121,7 @@ public class SevenSort {
     }
 
     /**
-     * 二分插入排序---插入排序的优化
+     * 折半插入排序---插入排序的优化
      * @param arr
      */
     public static void insertionSortBS(int[] arr){
