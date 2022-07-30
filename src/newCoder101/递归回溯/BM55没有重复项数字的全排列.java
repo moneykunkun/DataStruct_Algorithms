@@ -44,7 +44,7 @@ public class BM55没有重复项数字的全排列 {
     }
 
     /**
-     * 交换几个中粮元素的位置
+     * 交换集合中元素的位置
      * @param cur
      * @param i1
      * @param i2
