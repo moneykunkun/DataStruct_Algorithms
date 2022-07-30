@@ -13,12 +13,11 @@ public class SortTest {
         int[] arrCopy4 =SortHelper.arrCopy(arr);
         int[] arrCopy5 =SortHelper.arrCopy(arr);
         int[] arrCopy6 =SortHelper.arrCopy(arr);
-        //SortHelper.testSort("heapSort",arrCopy2);
-        //SortHelper.testSort("bubbleSort",arrCopy3);
-        //SortHelper.testSort("selectionSort",arrCopy1);
-        //SortHelper.testSort("selectionSortOP",arrCopy4);
+        SortHelper.testSort("heapSort",arrCopy2);
+        SortHelper.testSort("bubbleSort",arrCopy3);
+        SortHelper.testSort("selectionSort",arrCopy1);
+        SortHelper.testSort("selectionSortOP",arrCopy4);
         SortHelper.testSort("insertionSort",arrCopy5);
         SortHelper.testSort("insertionSortBS",arrCopy6);
-
     }
 }
