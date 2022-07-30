@@ -5,7 +5,7 @@ package 算法.动态规划;
  * https://www.nowcoder.com/practice/459bd355da1549fa8a49e350bf3df484?tpId=295&sfm=discuss&channel=nowcoder
  */
 public class Nc_maxArraySum {
-    public class Solution {
+
         public int FindGreatestSumOfSubArray(int[] array) {
             int n=array.length;
             int[] dp =new int[n];
@@ -20,4 +20,4 @@ public class Nc_maxArraySum {
             return max;
         }
     }
-}
+
