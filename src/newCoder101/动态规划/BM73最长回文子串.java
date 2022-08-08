@@ -18,4 +18,25 @@ public class BM73最长回文子串 {
         }
         return end-begin -1;
     }
+
+    /**
+     * 动态规划解法
+     * @param A
+     * @return
+     */
+    public int getLongestPalindrome1 (String A) {
+        // write code here
+        boolean[][] dp = new boolean[A.length()][A.length()];
+        int res = 0;
+        for(int i = A.length()-1;i>=0;i--){
+            for(int j = i;j<A.length();j++){
+                if(A.charAt(i) == A.charAt(j)){
+                    if(j-i <= 1) dp[i][j] = true;
+                    else if (dp[i+1][j-1]) dp[i][j] = true;
+                    if(dp[i][j]) res = Math.max(res,j-i+1);
+                }
+            }
+        }
+        return res;
+    }
 }
