@@ -19,7 +19,6 @@ public class BM87合并两个有序的数组 {
         }
     }
 
-
     /**
      * 解法2
      * @param nums1
