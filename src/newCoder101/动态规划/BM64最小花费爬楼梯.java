@@ -1,8 +1,6 @@
 package newCoder101.动态规划;
 
 public class BM64最小花费爬楼梯 {
-
-
     /**
      * 最小花费
      * @param cost
