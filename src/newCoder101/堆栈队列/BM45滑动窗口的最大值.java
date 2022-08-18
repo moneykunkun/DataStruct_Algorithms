@@ -1,5 +1,6 @@
 package newCoder101.堆栈队列;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 
 public class BM45滑动窗口的最大值 {
@@ -20,7 +21,6 @@ public class BM45滑动窗口的最大值 {
         }
         return res;
     }
-
     /**
      * 计算执行区间内的最大值
      * @param left
@@ -36,5 +36,33 @@ public class BM45滑动窗口的最大值 {
             }
         }
         return max;
+    }
+
+
+    /**
+     * 解法2
+     * @param num
+     * @param size
+     * @return
+     */
+    public ArrayList<Integer> maxInWindows2(int [] num, int size) {
+        //存放结果集的
+        ArrayList<Integer> res =new ArrayList<>();
+        //双端队列
+        ArrayDeque<Integer> deque =new ArrayDeque<>();
+        for (int i = 0; i < num.length; i++) {
+            while (!deque.isEmpty() && num[deque.getLast()]<num[i]){
+                deque.pollLast();
+            }
+            deque.addLast(i);
+            //滑动窗口移动时，将队首元素出队
+            while (!deque.isEmpty() && deque.getFirst() <=i-size){
+                deque.pollFirst();
+            }
+            if (i >=size-1){
+                res.add(num[deque.getFirst()]);
+            }
+        }
+        return res;
     }
 }
