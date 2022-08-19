@@ -42,7 +42,6 @@ public class BM11链表相加 {
         }
         //最后将整个链表再反转回来
         return reverseList(newHead.next);
-
     }
 
     //反转链表
