@@ -20,33 +20,41 @@ public class BM98螺旋矩阵 {
             //直到边界重合
             while(left <= right && up <= down){
                 //上边界的从左到右
-                for(int i = left; i <= right; i++)
+                for(int i = left; i <= right; i++) {
                     res.add(matrix[up][i]);
+                }
                 //上边界向下
                 up++;
-                if(up > down)
+                if(up > down) {
                     break;
+                }
                 //右边界的从上到下
-                for(int i = up; i <= down; i++)
+                for(int i = up; i <= down; i++) {
                     res.add(matrix[i][right]);
+                }
                 //右边界向左
                 right--;
-                if(left > right)
+                if(left > right) {
                     break;
+                }
                 //下边界的从右到左
-                for(int i = right; i >= left; i--)
+                for(int i = right; i >= left; i--) {
                     res.add(matrix[down][i]);
+                }
                 //下边界向上
                 down--;
-                if(up > down)
+                if(up > down) {
                     break;
+                }
                 //左边界的从下到上
-                for(int i = down; i >= up; i--)
+                for(int i = down; i >= up; i--) {
                     res.add(matrix[i][left]);
+                }
                 //左边界向右
                 left++;
-                if(left > right)
+                if(left > right) {
                     break;
+                }
             }
             return res;
         }
