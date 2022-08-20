@@ -18,4 +18,11 @@ public class Num136_只出现一次的数字 {
         }
         return res;
     }
+    public int singleNumber1(int[] nums) {
+        int single =0;
+        for (int num : nums) {
+            single ^=num;
+        }
+        return single;
+    }
 }
