@@ -1,5 +1,6 @@
 package leetcode;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,5 +19,16 @@ public class Num169_多数元素 {
             }
         }
         return res;
+    }
+
+
+    /**
+     * 排序解法
+     * @param nums
+     * @return
+     */
+    public int majorityElement1(int[] nums) {
+        Arrays.sort(nums);
+        return nums[nums.length/2];
     }
 }
