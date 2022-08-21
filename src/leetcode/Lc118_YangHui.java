@@ -1,4 +1,4 @@
-package newCoder101;
+package leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
