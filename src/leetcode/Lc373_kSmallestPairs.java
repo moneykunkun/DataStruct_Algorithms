@@ -1,4 +1,4 @@
-package newCoder101;
+package leetcode;
 
 //查找和最小的 K 对数字
 //https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/
