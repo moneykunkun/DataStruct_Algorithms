@@ -1,4 +1,4 @@
-package newCoder101;
+package newCoder101.其他;
 import java.util.Scanner;
 /**
  * 链接：https://www.nowcoder.com/questionTerminal/e8fb8f89f5d147ec92fd8ecfefe89b0d?f=discussion
