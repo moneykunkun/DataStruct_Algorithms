@@ -1,4 +1,4 @@
-package newCoder101;
+package newCoder101.其他;
 
 public class Nc_getLCA {
     /**
