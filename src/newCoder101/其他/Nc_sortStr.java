@@ -1,4 +1,4 @@
-package newCoder101;
+package newCoder101.其他;
 
 import java.util.Scanner;
 //排序子序列
