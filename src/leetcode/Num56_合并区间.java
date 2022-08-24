@@ -28,5 +28,4 @@ public class Num56_合并区间 {
         }
         return merged.toArray(new int[merged.size()][]);
     }
-
 }
