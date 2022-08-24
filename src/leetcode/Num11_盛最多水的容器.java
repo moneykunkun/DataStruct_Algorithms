@@ -1,6 +1,7 @@
 package leetcode;
 
 public class Num11_盛最多水的容器 {
+
     public int maxArea(int[] height) {
         int n =height.length;
         if(n<2){
