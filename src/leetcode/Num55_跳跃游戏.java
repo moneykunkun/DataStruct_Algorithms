@@ -13,4 +13,17 @@ public class Num55_跳跃游戏 {
         }
         return true;
     }
+
+    public boolean canJump2(int[] nums) {
+       int n =nums.length;
+       int reach =0;
+       //优化 如果直接能到达最后位置，就直接退出循环
+       for (int i=0;i<=reach && reach <n-1;i++){
+           reach =Math.max(reach,i+nums[i]);
+       }
+       //reach=n-1表示能达到最后位置
+       return reach>=n-1;
+    }
+
+
 }
