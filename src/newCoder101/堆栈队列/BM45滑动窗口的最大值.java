@@ -38,7 +38,6 @@ public class BM45滑动窗口的最大值 {
         return max;
     }
 
-
     /**
      * 解法2
      * @param num
