@@ -5,6 +5,11 @@ import java.util.List;
 
 public class Num448_找到所有数组中消失的数字 {
 
+    /**
+     * 找到数组中不存在的数字
+     * @param nums
+     * @return
+     */
     public List<Integer> findDisappearedNumbers(int[] nums) {
         int n = nums.length;
         for (int num : nums) {
