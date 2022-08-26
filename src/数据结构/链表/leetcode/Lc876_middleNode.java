@@ -11,12 +11,12 @@ public class Lc876_middleNode {
         //快指针，从头开始，一次走两步
         ListNode fast = head;
         //慢指针，从头开始，一次走一步
-        ListNode low = head;
+        ListNode slow = head;
         //循环终止两件 ：fast为空(偶数个节点)，fast.next为空（奇数个节点）
         while (fast != null && fast.next != null) {
-            low = low.next;          //走一步
+            slow = slow.next;          //走一步
             fast = fast.next.next;       //走两步
         }
-        return low;
+        return slow;
     }
 }
