@@ -2,10 +2,10 @@ package leetcode;
 
 public class Num14_最长公共前缀 {
 
-    class Solution {
         public String longestCommonPrefix(String[] strs) {
-            if (strs.length == 0)
+            if (strs.length == 0) {
                 return "";
+            }
             String ans = strs[0];
             for (int i = 1; i < strs.length; i++) {
                 int j = 0;
@@ -21,4 +21,3 @@ public class Num14_最长公共前缀 {
         }
     }
 
-}
