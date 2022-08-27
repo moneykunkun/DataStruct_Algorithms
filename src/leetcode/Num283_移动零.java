@@ -2,7 +2,7 @@ package leetcode;
 
 public class Num283_移动零 {
 
-    class Solution {
+
         public void moveZeroes(int[] nums) {
             if(nums==null) {
                 return;
@@ -20,7 +20,7 @@ public class Num283_移动零 {
                 nums[i] = 0;
             }
         }
-    }
+
 
 
 }
