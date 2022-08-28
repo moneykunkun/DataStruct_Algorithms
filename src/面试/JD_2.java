@@ -1,3 +1,5 @@
+package 面试;
+
 import java.util.Scanner;
 
 public class JD_2 {
