@@ -132,7 +132,7 @@ public class QuickSort {
     }
     public static void main(String[] args) {
         int[] arr={9,12,8,10,7,16,18,2,1};
-        quickSortNonRecursion(arr);
+        quickSort(arr);
         System.out.println(Arrays.toString(arr));
     }
 }
