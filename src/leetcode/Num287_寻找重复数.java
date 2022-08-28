@@ -20,11 +20,35 @@ public class Num287_寻找重复数 {
     }
 
     /**
-     * 二分查找
+     * 快慢指针解法
+     * 性能较为优越
      * @param nums
      * @return
      */
     public int findDuplicate1(int[] nums) {
+        int slow = 0;
+        int fast = 0;
+        slow = nums[slow];
+        fast = nums[nums[fast]];
+        while(slow != fast){
+            slow = nums[slow];
+            fast = nums[nums[fast]];
+        }
+        int pre1 = 0;
+        int pre2 = slow;
+        while(pre1 != pre2){
+            pre1 = nums[pre1];
+            pre2 = nums[pre2];
+        }
+        return pre1;
+    }
+
+    /**
+     * 二分查找
+     * @param nums
+     * @return
+     */
+    public int findDuplicate2(int[] nums) {
         int n = nums.length;
         int l = 1, r = n - 1, ans = -1;
         while (l <= r) {
