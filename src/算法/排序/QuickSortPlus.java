@@ -2,8 +2,28 @@ package 算法.排序;
 
 import java.util.Arrays;
 
+/**
+ * 快速排序
+ */
 public class QuickSortPlus {
+    /**
+     * 快速排序
+     * 时间复杂度 NlogN
+     * @param arr
+     */
+    public static void quickSort(int[] arr,int left,int right){
+        //找到基准值
+        if (left>=right) {
+            return;
+        }
+        //找到基准值
+        int pivot=partition(arr,left,right);
 
+        //递归基准值的左区间
+        quickSort(arr,left,pivot-1);
+        //递归基准值的右区间
+        quickSort(arr,pivot+1,right);
+    }
 
     /**
      * 分区函数，找到基准值
@@ -17,7 +37,6 @@ public class QuickSortPlus {
         int tmp =arr[left];
 
         while (left<right){
-
             //从后往前看，和基准值比较
             while (left <right &&arr[right] >=tmp){
                 right--;
@@ -41,25 +60,7 @@ public class QuickSortPlus {
         }
         return tmp;
     }
-    /**
-     * 快速排序
-     * @param arr
-     */
-    public static void quickSort(int[] arr,int left,int right){
 
-        //找到基准值
-        if (left>=right) {
-            return;
-        }
-
-        //找到基准值
-        int pivot=partition(arr,left,right);
-
-        //递归基准值的左区间
-        quickSort(arr,left,pivot-1);
-        //递归基准值的右区间
-        quickSort(arr,pivot+1,right);
-        }
 
     public static void main(String[] args) {
         int[] arr ={1,12,3,7,2,5,10,16};
