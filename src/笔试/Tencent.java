@@ -1,4 +1,4 @@
-package 面试;
+package 笔试;
 
 import java.util.HashMap;
 
@@ -14,6 +14,6 @@ public class Tencent {
             map.put(c,map.getOrDefault(c,0)+1);
         }
 
-
+return 0;
     }
 }
