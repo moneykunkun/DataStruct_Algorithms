@@ -1,4 +1,4 @@
-package 笔试;
+package 技术笔试;
 
 public class AL_1 {
     /**
