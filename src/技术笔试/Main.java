@@ -1,4 +1,4 @@
-package 笔试;
+package 技术笔试;
 
 import java.util.ArrayList;
 
