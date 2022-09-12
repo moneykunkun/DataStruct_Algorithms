@@ -25,7 +25,6 @@ public class Offer06_从尾到头打印链表 {
         }
         return array;
     }
-
     /**
      * 栈的思路
      * @param head
@@ -46,5 +45,4 @@ public class Offer06_从尾到头打印链表 {
         }
         return array;
     }
-
 }
