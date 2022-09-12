@@ -1,8 +1,8 @@
 package newCoder101.链表;
 
 import java.util.ArrayList;
-public class JZ6从尾到头打印链表 {
 
+public class JZ6从尾到头打印链表 {
         public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
             ArrayList<Integer> list= new ArrayList<>();
             //反转链表
@@ -12,7 +12,6 @@ public class JZ6从尾到头打印链表 {
                 head =head.next;
             }
             return list;
-
         }
         //反转链表
         public static ListNode reverseList(ListNode head) {
