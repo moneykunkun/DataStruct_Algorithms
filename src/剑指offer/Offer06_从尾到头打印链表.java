@@ -26,6 +26,25 @@ public class Offer06_从尾到头打印链表 {
         return array;
     }
 
-
+    /**
+     * 栈的思路
+     * @param head
+     * @return
+     */
+    public int[] reversePrint1(ListNode head) {
+        if (head ==null){
+            return new int[0];
+        }
+        LinkedList<ListNode> stack =new LinkedList<>();
+        while (head !=null){
+            stack.push(head);
+            head =head.next;
+        }
+        int[] array =new int[stack.size()];
+        for (int i=0;i<array.length;i++){
+            array[i] =stack.pollFirst().val;
+        }
+        return array;
+    }
 
 }
