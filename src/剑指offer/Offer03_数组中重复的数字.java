@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
-public class Num03_数组中重复的数字 {
+public class Offer03_数组中重复的数字 {
 
     public int findRepeatNumber(int[] nums) {
         HashMap<Integer,Integer> map =new HashMap<>();
