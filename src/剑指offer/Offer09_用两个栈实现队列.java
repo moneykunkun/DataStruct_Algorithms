@@ -9,7 +9,6 @@ public class Offer09_用两个栈实现队列 {
 
     private Stack<Integer> stack1;
     private Stack<Integer> stack2;
-
     public Offer09_用两个栈实现队列() {
         this.stack1 =new Stack<>();
         this.stack2 =new Stack<>();
