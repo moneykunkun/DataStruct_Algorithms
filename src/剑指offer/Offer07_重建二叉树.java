@@ -6,7 +6,6 @@ public class Offer07_重建二叉树 {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         return buildTreeHelper(preorder,inorder,0,preorder.length-1);
     }
-
     /**
      * 根据前序遍历和总序遍历构建二叉树的辅助类
      * @param preorder
@@ -34,6 +33,12 @@ public class Offer07_重建二叉树 {
         return root;
     }
 
+    /**
+     * 查找节点
+     * @param inorder
+     * @param val
+     * @return
+     */
     private int findNode(int[] inorder, int val) {
         for (int i = 0; i < inorder.length; i++) {
             if (inorder[i] ==val){
