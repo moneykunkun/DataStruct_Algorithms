@@ -13,7 +13,6 @@ public class Tencent {
             //统计每个字符出现的次数
             map.put(c,map.getOrDefault(c,0)+1);
         }
-
-return 0;
+    return 0;
     }
 }
