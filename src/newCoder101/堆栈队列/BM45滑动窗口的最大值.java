@@ -8,7 +8,9 @@ public class BM45滑动窗口的最大值 {
     public ArrayList<Integer> maxInWindows(int [] num, int size) {
         ArrayList<Integer> res =new ArrayList<>();
         //边界条件
-        if (size<1 || num.length<size) return res;
+        if (size<1 || num.length<size) {
+            return res;
+        }
         //双指针
         int left =0;
         int right=size-1;
