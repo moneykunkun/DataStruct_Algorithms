@@ -2,6 +2,7 @@ package newCoder101.堆栈队列;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.PriorityQueue;
 
 public class BM45滑动窗口的最大值 {
 
@@ -65,5 +66,25 @@ public class BM45滑动窗口的最大值 {
             }
         }
         return res;
+    }
+
+    /**
+     * 解法3
+     */
+    public ArrayList<Integer> maxInWindows3(int [] num, int size) {
+        ArrayList<Integer> list = new ArrayList<>();
+        PriorityQueue<Integer> queue = new PriorityQueue<>((a, b) -> b - a);
+        int n = num.length;
+        int left = 0, right = 0;
+        while (right < n) {
+            queue.add(num[right]);
+            right++;
+            if (queue.size() == size) {
+                list.add(queue.peek());
+                queue.remove(num[left]);
+                left++;
+            }
+        }
+        return list;
     }
 }
