@@ -25,14 +25,14 @@ public class Offer59_滑动窗口的最大值 {
         int cnt = 0;
         ans[cnt++] = deque.getFirst();
         //k区间形成
-        for(int i = k; i < n; i++){
+        for (int i = k; i < n; i++) {
             //如果将要删除的nums[i-k]是之前k区间的最大值，那么说明此时首位值已经不再区间内了，需要删除
-            if(deque.getFirst() == nums[i-k]){
+            if (deque.getFirst() == nums[i - k]) {
                 deque.removeFirst();
             }
             //删除队列中比当前值小的值，因为我们只需要获得当前k区间的最大值[i-k+1,k]
             //这样能保存队列非递减有序
-            while(!deque.isEmpty() && deque.getLast() < nums[i]){
+            while (!deque.isEmpty() && deque.getLast() < nums[i]) {
                 deque.removeLast();
             }
             deque.addLast(nums[i]);
