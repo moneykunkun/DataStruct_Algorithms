@@ -2,7 +2,9 @@ package 剑指offer;
 
 public class Offer07_重建二叉树 {
 
-    private int index =0;           //表示处理前序遍历的索引位置
+    //表示处理前序遍历的索引位置
+    private int index =0;
+
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         return buildTreeHelper(preorder,inorder,0,preorder.length-1);
     }
