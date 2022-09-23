@@ -12,13 +12,16 @@ public class Offer03_数组中重复的数字 {
             map.put(num,map.getOrDefault(num,0)+1);
         }
         int res =-1;
+
         for (Map.Entry<Integer,Integer> entry:map.entrySet()){
             if (entry.getValue()>1){
              res =entry.getKey();
             }
         }
+
         return  res;
     }
+
     /**
      * set集合
      * @param nums
