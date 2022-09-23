@@ -2,6 +2,7 @@ package 剑指offer;
 
 public class Offer15_二进制中1的个数 {
 
+    //无符号右移
     public int hammingWeight(int n) {
         int res =0;
         while (n!=0){
