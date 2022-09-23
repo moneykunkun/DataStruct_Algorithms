@@ -5,6 +5,7 @@ import java.util.Stack;
 public class Offer33_二叉搜索树的后序遍历序列 {
 
     public boolean verifyPostorder(int[] postorder) {
+
         Stack<Integer> stack = new Stack<>();
         int root = Integer.MAX_VALUE;
         for(int i = postorder.length - 1; i >= 0; i--) {
