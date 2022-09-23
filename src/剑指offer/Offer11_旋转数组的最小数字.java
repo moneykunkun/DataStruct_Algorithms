@@ -1,6 +1,7 @@
 package 剑指offer;
 
 public class Offer11_旋转数组的最小数字 {
+
     //二分查找
     public int minArray(int[] numbers) {
         int left =0;
