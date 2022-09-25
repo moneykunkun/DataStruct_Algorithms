@@ -33,7 +33,7 @@ public class Offer38_字符串的排列 {
             swap(i,x);              //恢复交换
         }
     }
-
+    //交换位置
     private void swap(int i, int x) {
         char temp =chars[i];
         chars[i] =chars[x];
