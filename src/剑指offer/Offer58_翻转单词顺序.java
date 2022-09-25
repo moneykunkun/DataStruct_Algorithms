@@ -1,8 +1,5 @@
 package 剑指offer;
 
-import java.util.LinkedList;
-import java.util.Stack;
-
 public class Offer58_翻转单词顺序 {
 
     public String reverseWords(String s) {
@@ -17,7 +14,6 @@ public class Offer58_翻转单词顺序 {
                 sb.append(str[i]).append(" ");
             }
         }
-
         return sb.toString().trim();
     }
 }
