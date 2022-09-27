@@ -13,7 +13,9 @@ package 算法.动态规划;
 public class Num198_rob {
         public static int rob(int[] nums) {
         int n=nums.length;
-        if (n<=1) return n==0?0 : nums[0];
+        if (n<=1) {
+            return n==0?0 : nums[0];
+        }
         int[] temp =new int[n];
         temp[0]=nums[0];
         temp[1] =Math.max(nums[0],nums[1]);
