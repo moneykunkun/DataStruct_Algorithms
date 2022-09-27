@@ -30,12 +30,10 @@ public class Lc22_括号生成 {
                 res.add(curStr);
                 return;
             }
-
             // 剪枝（如图，左括号可以使用的个数严格大于右括号可以使用的个数，才剪枝，注意这个细节）
             if (left > right) {
                 return;
             }
-
             if (left > 0) {
                 dfs(curStr + "(", left - 1, right, res);
             }
