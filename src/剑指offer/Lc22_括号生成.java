@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Lc22_括号生成 {
-
         // 做减法
         public List<String> generateParenthesis(int n) {
             List<String> res = new ArrayList<>();
@@ -37,7 +36,6 @@ public class Lc22_括号生成 {
             if (left > 0) {
                 dfs(curStr + "(", left - 1, right, res);
             }
-
             if (right > 0) {
                 dfs(curStr + ")", left, right - 1, res);
             }
