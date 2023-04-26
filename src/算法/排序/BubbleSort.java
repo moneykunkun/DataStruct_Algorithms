@@ -20,6 +20,7 @@ public class BubbleSort {
      * 冒泡排序的优化算法
      * 时间复杂度：O(N^2)
      * 空间复杂度：O(1)
+     * 稳定性排序算法
      * @param arr
      */
     public static void bubbleSortPlus(int[] arr){
