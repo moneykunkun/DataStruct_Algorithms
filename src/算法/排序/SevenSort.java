@@ -35,7 +35,7 @@ public class SevenSort {
     }
     /**
      * 选择排序
-     * 时间复杂度 ：O（n^2）
+     * 时间复杂度 ：O(n^2)
      * 不稳定
      */
     public static void selectionSort(int[] arr){
@@ -194,6 +194,12 @@ public class SevenSort {
                 i=j;
             }
         }
+    }
+
+    public static void main(String[] args) {
+        int[] arr ={12,4,6,23,18,45,9,7,10,3};
+        heapSort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 
 }
